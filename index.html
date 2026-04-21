@@ -38,6 +38,10 @@
             letter-spacing: 0.02em;
             white-space: nowrap;
         }
+        .img-zoom { cursor: zoom-in !important; transition: opacity 0.15s, box-shadow 0.15s; }
+        .img-zoom:hover { opacity: 0.88; box-shadow: 0 0 0 3px #3b82f6; border-radius: 8px; }
+        #lightbox { animation: fadeIn 0.15s ease-out; }
+        #lightbox-img { animation: fadeIn 0.2s ease-out; }
     </style>
 </head>
 <body class="bg-slate-50 font-sans text-slate-900 selection:bg-blue-200 min-h-screen flex flex-col">
@@ -185,6 +189,54 @@
                     </div>
                 </div>
             </div>
+            <!-- BLOC EXANTIS INFORMATIQUE -->
+            <div class="mb-20 bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 md:p-10 text-white overflow-hidden relative">
+                <div class="absolute top-0 right-0 w-72 h-72 bg-blue-500 rounded-full blur-3xl opacity-10 -mr-20 -mt-20 pointer-events-none"></div>
+                <div class="relative z-10">
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1">
+                            <div class="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-500/30 text-blue-300 text-xs font-bold px-3 py-1.5 rounded-full mb-4 uppercase tracking-wider">
+                                <i class="fa-solid fa-building"></i> Entreprise d'alternance — Avignon (84)
+                            </div>
+                            <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-3">Exantis Informatique</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-5">Prestataire informatique spécialisé dans la gestion de parcs pour PME, établissements scolaires et associations en région PACA. Exantis est une <strong class="text-white">SCOP</strong> (Société Coopérative et Participative) qui assure une prestation d'<strong class="text-white">infogérance complète</strong> : support hotline N1/N2, maintenance sur site en régie, déploiement d'infrastructures réseaux et sécurité.</p>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+                                <div class="bg-white/10 rounded-xl p-3 text-center border border-white/10">
+                                    <div class="text-2xl font-extrabold text-blue-300">330+</div>
+                                    <div class="text-xs text-slate-400 mt-1">Endpoints gérés</div>
+                                </div>
+                                <div class="bg-white/10 rounded-xl p-3 text-center border border-white/10">
+                                    <div class="text-2xl font-extrabold text-emerald-300">8</div>
+                                    <div class="text-xs text-slate-400 mt-1">Sites clients actifs</div>
+                                </div>
+                                <div class="bg-white/10 rounded-xl p-3 text-center border border-white/10">
+                                    <div class="text-xl font-extrabold text-amber-300">N1/N2</div>
+                                    <div class="text-xs text-slate-400 mt-1">Hotline & régie</div>
+                                </div>
+                                <div class="bg-white/10 rounded-xl p-3 text-center border border-white/10">
+                                    <div class="text-xl font-extrabold text-purple-300">MSP</div>
+                                    <div class="text-xs text-slate-400 mt-1">Infogérance</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-white/10 border border-white/20 text-slate-200 text-xs font-bold px-3 py-1.5 rounded-lg">Atera — RMM</span>
+                                <span class="bg-white/10 border border-white/20 text-slate-200 text-xs font-bold px-3 py-1.5 rounded-lg">FreshService — ITSM</span>
+                                <span class="bg-white/10 border border-white/20 text-slate-200 text-xs font-bold px-3 py-1.5 rounded-lg">SentinelOne — EDR</span>
+                                <span class="bg-white/10 border border-white/20 text-slate-200 text-xs font-bold px-3 py-1.5 rounded-lg">Remote Desktop Manager</span>
+                                <span class="bg-white/10 border border-white/20 text-slate-200 text-xs font-bold px-3 py-1.5 rounded-lg">Microsoft 365 / Azure AD</span>
+                                <span class="bg-white/10 border border-white/20 text-slate-200 text-xs font-bold px-3 py-1.5 rounded-lg">Fortinet / HPE Instant On</span>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-56 shrink-0">
+                            <div class="bg-white/10 rounded-xl p-2 border border-white/20 cursor-zoom-in hover:border-blue-400/50 transition-colors" onclick="openLightbox('Atelier%20et%20prepa%20poste/PRTG.png')">
+                                <img src="Atelier%20et%20prepa%20poste/PRTG.png" alt="Dashboard PRTG Exantis" class="w-full rounded-lg object-cover">
+                                <p class="text-center text-xs text-slate-400 mt-2 font-medium"><i class="fa-solid fa-display mr-1"></i> PRTG — Supervision temps réel</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                 <div>
                     <h3 class="text-2xl font-bold text-slate-800 mb-8 flex items-center gap-3 pb-4 border-b border-slate-200"><i class="fa-solid fa-briefcase text-amber-500"></i> Parcours Pro</h3>
@@ -228,10 +280,15 @@
         <!-- ========================================================= -->
         <section id="projets" class="hidden animate-fadeIn max-w-6xl mx-auto px-4 py-12 relative">
             <div id="projects-grid-view">
-                <div class="text-center mb-12">
+                <div class="text-center mb-8">
                     <h2 class="text-3xl font-bold text-slate-800 mb-2">Projets & Situations Professionnelles</h2>
                     <div class="w-20 h-1 bg-blue-500 mx-auto rounded-full mb-4"></div>
-                    <p class="text-slate-500">Épreuve E4 - BTS SIO Option SISR</p>
+                    <p class="text-slate-500 mb-6">Épreuve E4 - BTS SIO Option SISR</p>
+                    <a href="dossier_professionnel_-_e5%20(4).pdf" target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-lg hover:shadow-indigo-500/30 hover:-translate-y-0.5 text-sm">
+                        <i class="fa-solid fa-file-pdf text-lg"></i>
+                        Aperçu — Tableau de Synthèse BTS SIO
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-70"></i>
+                    </a>
                 </div>
 
                 <!-- CARTE DES PROJETS MAJEURS -->
@@ -247,7 +304,7 @@
                             </div>
                         </div>
                         <div class="p-6 flex-1 flex flex-col">
-                            <p class="text-sm text-slate-600 mb-4 flex-1">Remplacement de 6 anciens switches par une architecture <strong>VLANs 802.1Q</strong> managée via portail Cloud pour l'école Sancta Maria. Segmentation complète des flux administration / pédagogie / gestion.</p>
+                            <p class="text-sm text-slate-600 mb-4 flex-1">Remplacement de 6 anciens switches par une architecture <strong>VLANs 802.1Q</strong> managée via portail Cloud pour l'école Saint-André. Segmentation complète des flux administration / pédagogie / gestion.</p>
                             <div class="flex flex-wrap gap-2 mb-6">
                                 <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">HPE Instant On</span>
                                 <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">VLAN 802.1Q</span>
@@ -267,16 +324,16 @@
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
                             <div class="absolute bottom-4 left-4 right-4 text-white">
                                 <span class="bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider mb-2 inline-block">Projet Majeur · 15/09 – 19/09/2025</span>
-                                <h3 class="text-xl font-bold leading-tight">Infrastructure WiFi Centralisée : Aruba Instant & FortiGate</h3>
+                                <h3 class="text-xl font-bold leading-tight">Infrastructure WiFi 6 : FortiAP + Contrôleur FortiGate</h3>
                             </div>
                         </div>
                         <div class="p-6 flex-1 flex flex-col">
-                            <p class="text-sm text-slate-600 mb-4 flex-1">Déploiement de bornes d'accès Aruba sur un nouveau site, pilotées par un <strong>contrôleur virtuel</strong>. Double SSID avec isolation des flux via <strong>VLANs sur FortiGate</strong> (réseau interne + invités).</p>
+                            <p class="text-sm text-slate-600 mb-4 flex-1">Déploiement de <strong>8 bornes FortiAP</strong> (FAP-231G/234G) sur le site industriel LogiSud, pilotées via <strong>CAPWAP</strong> par un FortiGate FGT-80FPOE. Double SSID : <strong>WIFI-PRO</strong> (interne) + <strong>WIFI-GUEST</strong> (général).</p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">Aruba Instant</span>
-                                <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">FortiGate</span>
-                                <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">WPA2</span>
-                                <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">Portail Captif</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">FortiAP FAP-231G/234G</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">FortiGate FGT-80FPOE</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">WiFi 6 (802.11ax)</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">CAPWAP</span>
                             </div>
                             <button class="w-full bg-slate-900 hover:bg-blue-600 text-white font-bold py-3 rounded-xl transition-colors text-sm flex justify-center items-center gap-2">
                                 Lire le dossier technique <i class="fa-solid fa-chevron-right"></i>
@@ -305,7 +362,7 @@
             </div>
 
             <!-- ============================================================ -->
-            <!-- VUE DÉTAILLÉE : PROJET 1 — 6 Commutateurs (Sancta Maria)    -->
+            <!-- VUE DÉTAILLÉE : PROJET 1 — 6 Commutateurs (Saint-André)    -->
             <!-- ============================================================ -->
             <div id="project-detail-1" class="hidden animate-fadeIn max-w-7xl mx-auto py-8">
                 <button onclick="hideProjectDetail()" class="flex items-center gap-2 text-slate-500 hover:text-blue-600 mb-8 font-medium transition-colors">
@@ -322,7 +379,7 @@
                         <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
                             <div class="bg-slate-800 text-white text-sm font-bold py-3 px-4 uppercase tracking-wider">Fiche Technique</div>
                             <div class="divide-y divide-slate-100 text-sm">
-                                <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Client</span><span class="text-slate-800 font-medium">École Sancta Maria</span></div>
+                                <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Client</span><span class="text-slate-800 font-medium">École Saint-André</span></div>
                                 <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Prestataire</span><span class="text-slate-800 font-medium">Exantis Informatique</span></div>
                                 <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Durée</span><span class="text-slate-800 font-medium">3 jours (02–04/04/2025)</span></div>
                                 <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Rôle</span><span class="text-slate-800 font-medium">Technicien SISR</span></div>
@@ -355,11 +412,16 @@
 
                     <!-- CONTENU PRINCIPAL -->
                     <div class="lg:col-span-8 bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100">
-                        <div class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Dossier Technique E4</div>
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <div class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Dossier Technique E4</div>
+                            <div class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-500 text-xs font-medium px-3 py-1 rounded-full border border-slate-200">
+                                <i class="fa-solid fa-magnifying-glass-plus text-blue-400"></i> Cliquer sur une image pour l'agrandir
+                            </div>
+                        </div>
                         <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">Refonte LAN : Remplacement de 6 Commutateurs, Segmentation VLANs & Management Cloud</h1>
 
                         <p class="text-lg text-slate-700 mb-12 leading-relaxed border-l-4 border-blue-500 pl-6 bg-slate-50 py-4 rounded-r-xl font-medium">
-                            <strong>Situation :</strong> Nouveau client Exantis — l'école Sancta Maria souhaitait remplacer une infrastructure réseau vétuste et non-manageable par une architecture moderne, sécurisée et supervisable à distance.
+                            <strong>Situation :</strong> Nouveau client Exantis — l'école Saint-André souhaitait remplacer une infrastructure réseau vétuste et non-manageable par une architecture moderne, sécurisée et supervisable à distance.
                         </p>
 
                         <div class="space-y-12">
@@ -369,10 +431,10 @@
                                     <span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">1</span> Présentation de l'entreprise & Contexte
                                 </h2>
                                 <p class="text-slate-700 leading-relaxed text-justify mb-4">Mon alternance se déroule chez <strong>Exantis Informatique</strong>, une SCOP (Société Coopérative et Participative) basée à Avignon, spécialisée en infogérance pour les PME et établissements scolaires de la région PACA.</p>
-                                <p class="text-slate-700 leading-relaxed text-justify mb-6">L'école Sancta Maria est un nouveau client d'Exantis, ayant changé de prestataire suite à une gestion désorganisée de l'ancien informaticien. Le réseau en place reposait sur des switches <strong>D-Link grand public non-manageables</strong>, ce qui rendait toute supervision ou segmentation impossible.</p>
+                                <p class="text-slate-700 leading-relaxed text-justify mb-6">L'école Saint-André est un nouveau client d'Exantis, ayant changé de prestataire suite à une gestion désorganisée de l'ancien informaticien. Le réseau en place reposait sur des switches <strong>D-Link grand public non-manageables</strong>, ce qui rendait toute supervision ou segmentation impossible.</p>
                                 <div class="mt-6 bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
-                                    <img src="exantis photo entreprise.png" alt="Bureaux d'Exantis Informatique" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
-                                    <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-camera mr-1"></i> Locaux d'Exantis Informatique — Avignon</p>
+                                    <img src="Atelier%20et%20prepa%20poste/Bureau.png" alt="Atelier Exantis Informatique" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm" style="max-height:280px;object-fit:cover;">
+                                    <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-camera mr-1"></i> Atelier Exantis — Banc de test et préparation des équipements clients</p>
                                 </div>
                             </div>
 
@@ -468,16 +530,16 @@
 
                                 <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm md:col-span-2">
-                                        <img src="shema reseaux sancta marie.png" alt="Schéma Logique" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
-                                        <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-sitemap mr-1"></i> Schéma réseau logique — École Sancta Maria</p>
+                                        <img src="Aruba/topologie.png" alt="Topologie réseau — 6 switches Saint-André" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
+                                        <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-sitemap mr-1"></i> Topologie Cloud HPE — 6 switches (CR01 à CR06), liaison trunk 802.1Q, statut "Excellente"</p>
                                     </div>
                                     <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
-                                        <img src="adresses ip.png" alt="Plan d'adressage IP" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
-                                        <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-list-ol mr-1"></i> Plan d'adressage IP segmenté</p>
+                                        <img src="Aruba/Adressage%20IP.png" alt="Plan d'adressage IP et relais DHCP" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
+                                        <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-list-ol mr-1"></i> Plan d'adressage IP — Relais <code>DHCP</code> par VLAN</p>
                                     </div>
                                     <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
-                                        <img src="vlan.png" alt="Configuration VLAN" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
-                                        <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-network-wired mr-1"></i> Table des VLANs configurée sur le portail</p>
+                                        <img src="Aruba/topologie.png" alt="Topologie des 6 switches" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
+                                        <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-network-wired mr-1"></i> Topologie Cloud — 6 switches nommés, état "Excellente"</p>
                                     </div>
                                 </div>
                             </div>
@@ -499,9 +561,15 @@
 
                                 <p class="text-slate-700 leading-relaxed text-justify mb-6">Une contrainte énergétique supplémentaire a été adressée : les ports <code>PoE+</code> alimentant les équipements pédagogiques sont configurés avec une <strong>plage horaire de coupure automatique la nuit</strong> (22h–6h), réduisant la consommation électrique hors présence.</p>
 
-                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
-                                    <img src="montage.png" alt="Montage physique en baie" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
-                                    <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-screwdriver-wrench mr-1"></i> Rackage, câblage et brassage en baie 19"</p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
+                                        <img src="Atelier%20et%20prepa%20poste/Atelier.png" alt="Préparation switches en atelier Exantis" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm" style="max-height:240px;object-fit:cover;">
+                                        <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-screwdriver-wrench mr-1"></i> Pré-configuration des switches en atelier — avant déploiement sur site</p>
+                                    </div>
+                                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
+                                        <img src="Aruba/Alimentation%20ip.png" alt="Planification PoE horaire" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
+                                        <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-clock mr-1"></i> Affectation horaire <code>PoE+</code> — Coupure automatique nocturne</p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -525,9 +593,15 @@
                                         <div class="text-sm font-bold text-slate-700 mt-1">Incident post-déploiement</div>
                                     </div>
                                 </div>
-                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
-                                    <img src="topologie reseaux.png" alt="Interface de supervision" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
-                                    <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-desktop mr-1"></i> Interface de supervision Cloud — Topologie HPE Instant On</p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm md:col-span-2">
+                                        <img src="Aruba/topologie.png" alt="Topologie supervision des 6 switches" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
+                                        <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-desktop mr-1"></i> Supervision Cloud HPE — CR01 à CR06 · Intégrité "Excellente" sur les 6 switches</p>
+                                    </div>
+                                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm md:col-span-2">
+                                        <img src="Aruba/Alertes%20automatique.png" alt="Système d'alertes automatiques" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
+                                        <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-bell mr-1"></i> Alerte automatique : switch hors ligne, causes probables et temps de résolution</p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -548,7 +622,7 @@
             </div>
 
             <!-- ============================================================ -->
-            <!-- VUE DÉTAILLÉE : PROJET 2 — WiFi Aruba & FortiGate            -->
+            <!-- VUE DÉTAILLÉE : PROJET 2 — FortiAP WiFi 6 & FortiGate       -->
             <!-- ============================================================ -->
             <div id="project-detail-2" class="hidden animate-fadeIn max-w-7xl mx-auto py-8">
                 <button onclick="hideProjectDetail()" class="flex items-center gap-2 text-slate-500 hover:text-blue-600 mb-8 font-medium transition-colors"><i class="fa-solid fa-arrow-left"></i> Retour aux projets</button>
@@ -557,24 +631,24 @@
                     <!-- SIDEBAR -->
                     <div class="lg:col-span-4 space-y-6">
                         <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
-                            <img src="https://images.unsplash.com/photo-1562504208-03d85cc8c23e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Infrastructure WiFi" class="w-full h-64 object-cover" />
+                            <img src="Fortinet/Casibel%20(borne)/Map%20borne.png" alt="Plan de masse — emplacement des bornes" class="w-full h-64 object-cover" />
                         </div>
 
                         <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
                             <div class="bg-slate-800 text-white text-sm font-bold py-3 px-4 uppercase tracking-wider">Fiche Technique</div>
                             <div class="divide-y divide-slate-100 text-sm">
-                                <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Client</span><span class="text-slate-800 font-medium">Entreprise Rouby</span></div>
+                                <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Client</span><span class="text-slate-800 font-medium">LogiSud — Site Principal</span></div>
                                 <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Prestataire</span><span class="text-slate-800 font-medium">Exantis Informatique</span></div>
                                 <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Durée</span><span class="text-slate-800 font-medium">5 jours (15–19/09/2025)</span></div>
                                 <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Rôle</span><span class="text-slate-800 font-medium">Technicien SISR</span></div>
                                 <div class="p-4">
                                     <span class="font-bold text-slate-600 block mb-3">Technologies</span>
                                     <div class="flex flex-wrap gap-2 text-xs font-bold text-blue-700">
-                                        <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">Aruba Instant (IAP)</span>
-                                        <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">FortiGate</span>
-                                        <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">VLAN 802.1Q</span>
-                                        <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">WPA2</span>
-                                        <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">Portail Captif</span>
+                                        <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">FortiGate FGT-80FPOE</span>
+                                        <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">FortiAP FAP-231G/234G</span>
+                                        <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">WiFi 6 (802.11ax)</span>
+                                        <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">CAPWAP</span>
+                                        <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">Dual SSID</span>
                                         <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">PoE+</span>
                                     </div>
                                 </div>
@@ -588,34 +662,39 @@
                             <div class="p-4 space-y-3 text-xs font-medium text-slate-700 leading-tight">
                                 <div class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i> <strong>A3.1.1</strong> — Proposition d'une solution d'infrastructure</div>
                                 <div class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i> <strong>A3.2.1</strong> — Installation et configuration d'éléments actifs</div>
-                                <div class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i> <strong>B1.1</strong> — Administration d'une infrastructure Wi-Fi</div>
-                                <div class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i> <strong>B3.1</strong> — Sécurisation des flux et isolation réseau</div>
-                                <div class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i> <strong>A1.2.4</strong> — Tests d'intégration et validation</div>
+                                <div class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i> <strong>B1.1</strong> — Administration d'une infrastructure WiFi</div>
+                                <div class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i> <strong>B3.1</strong> — Sécurisation des flux, double SSID isolé</div>
+                                <div class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i> <strong>A1.2.4</strong> — Tests d'intégration et validation terrain</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- CONTENU PRINCIPAL -->
                     <div class="lg:col-span-8 bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100">
-                        <div class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Dossier Technique E4</div>
-                        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">Infrastructure WiFi Centralisée : Bornes Aruba Instant & Sécurisation FortiGate</h1>
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <div class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Dossier Technique E4</div>
+                            <div class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-500 text-xs font-medium px-3 py-1 rounded-full border border-slate-200">
+                                <i class="fa-solid fa-magnifying-glass-plus text-blue-400"></i> Cliquer sur une image pour l'agrandir
+                            </div>
+                        </div>
+                        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">Infrastructure WiFi Industrielle : FortiAP WiFi 6 & Contrôleur FortiGate</h1>
 
                         <p class="text-lg text-slate-700 mb-12 leading-relaxed border-l-4 border-blue-500 pl-6 bg-slate-50 py-4 rounded-r-xl font-medium">
-                            <strong>Situation :</strong> Ouverture d'un nouveau site pour l'entreprise Rouby, sans infrastructure réseau préexistante. Exantis est mandaté pour déployer une couverture Wi-Fi complète avec double réseau isolé (personnel / invités).
+                            <strong>Situation :</strong> Ouverture du site industriel LogiSud (entrepôt logistique), sans aucune infrastructure réseau. Mission : déployer une couverture WiFi 6 complète avec double réseau, piloté entièrement depuis le FortiGate.
                         </p>
 
                         <div class="space-y-12">
                             <!-- Section 1 -->
                             <div>
                                 <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3">
-                                    <span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">1</span> Contexte & Présentation du Besoin
+                                    <span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">1</span> Contexte & Présentation du Site
                                 </h2>
-                                <p class="text-slate-700 leading-relaxed text-justify mb-4">L'entreprise Rouby inaugure un nouveau site. Le bâtiment est vierge de toute connectivité réseau. Les contraintes métiers imposent deux catégories d'utilisateurs avec des droits d'accès radicalement différents :</p>
-                                <ul class="space-y-3 mb-6">
-                                    <li class="flex items-start gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100 text-sm text-slate-700"><div class="mt-1 w-2 h-2 rounded-full bg-blue-500 shrink-0"></div><span><strong>Employés :</strong> accès complet au réseau local, serveurs, imprimantes et Internet.</span></li>
-                                    <li class="flex items-start gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100 text-sm text-slate-700"><div class="mt-1 w-2 h-2 rounded-full bg-amber-500 shrink-0"></div><span><strong>Visiteurs / Fournisseurs :</strong> accès Internet uniquement, <em>isolation totale</em> du réseau interne.</span></li>
-                                </ul>
-                                <p class="text-slate-700 leading-relaxed text-justify">La priorité absolue est la <strong>sécurité des données internes</strong> : un visiteur connecté au Wi-Fi invité ne doit sous aucun prétexte pouvoir accéder aux ressources du réseau de l'entreprise.</p>
+                                <p class="text-slate-700 leading-relaxed text-justify mb-4">Le client <strong>LogiSud</strong> inaugure son nouveau site logistique : un entrepôt industriel couvrant plusieurs zones — quai de chargement, vestiaires, salles de travail (SEC E/F/K/M/X), zone froide (FRAIS J), espace compresseurs. Le bâtiment est totalement vierge de connectivité.</p>
+                                <p class="text-slate-700 leading-relaxed text-justify mb-6">Exantis Informatique est mandaté pour le déploiement complet. La contrainte clé : toute la gestion WiFi doit être centralisée sur le pare-feu déjà livré, le <strong>FortiGate FGT-80FPOE</strong>, évitant tout équipement de contrôle supplémentaire.</p>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
+                                    <img src="Fortinet/Casibel%20(borne)/Map%20borne.png" alt="Plan de masse du site LogiSud" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                                    <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-map mr-1"></i> Plan de masse — Emplacement des bornes FortiAP sur le site LogiSud</p>
+                                </div>
                             </div>
 
                             <!-- Section 2 -->
@@ -623,13 +702,14 @@
                                 <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3">
                                     <span class="bg-red-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">2</span> Problématique Technique
                                 </h2>
-                                <p class="text-slate-700 leading-relaxed text-justify mb-5">Sans infrastructure existante, plusieurs défis se posent simultanément : assurer une couverture radio homogène sur tout le bâtiment, créer une architecture <strong>multi-SSID avec isolation de flux</strong>, et garantir une gestion centralisée des bornes (éviter la configuration individuelle de chaque équipement).</p>
+                                <p class="text-slate-700 leading-relaxed text-justify mb-5">Un environnement industriel pose des contraintes radio spécifiques : structures métalliques (rayonnages, portiques), hauteur de plafond importante, zones longues et étroites. Il faut simultanément garantir la couverture et la <strong>séparation stricte des flux</strong> entre deux populations d'utilisateurs.</p>
                                 <div class="bg-red-50 border border-red-200 rounded-xl p-5">
-                                    <h4 class="font-bold text-red-700 mb-3 flex items-center gap-2"><i class="fa-solid fa-triangle-exclamation"></i> Risques à adresser</h4>
+                                    <h4 class="font-bold text-red-700 mb-3 flex items-center gap-2"><i class="fa-solid fa-triangle-exclamation"></i> Contraintes identifiées</h4>
                                     <ul class="space-y-2 text-sm text-slate-700">
-                                        <li class="flex items-start gap-2"><div class="mt-1.5 w-2 h-2 rounded-full bg-red-400 shrink-0"></div>Zones mortes WiFi si les bornes sont mal positionnées</li>
-                                        <li class="flex items-start gap-2"><div class="mt-1.5 w-2 h-2 rounded-full bg-red-400 shrink-0"></div>Accès invités au réseau LAN sans règles de filtrage strictes (<code>VLAN hopping</code>)</li>
-                                        <li class="flex items-start gap-2"><div class="mt-1.5 w-2 h-2 rounded-full bg-red-400 shrink-0"></div>Configuration dispersée si les bornes sont administrées individuellement</li>
+                                        <li class="flex items-start gap-2"><div class="mt-1.5 w-2 h-2 rounded-full bg-red-400 shrink-0"></div>Atténuation radio forte : matériaux métalliques, surface &gt; 2 000 m²</li>
+                                        <li class="flex items-start gap-2"><div class="mt-1.5 w-2 h-2 rounded-full bg-red-400 shrink-0"></div>Double population : personnel interne (<code>WIFI-PRO</code>) et réseau général (<code>WIFI-GUEST</code>)</li>
+                                        <li class="flex items-start gap-2"><div class="mt-1.5 w-2 h-2 rounded-full bg-red-400 shrink-0"></div>Alimentation bornes : pas de prises secteur disponibles → nécessite <code>PoE+</code></li>
+                                        <li class="flex items-start gap-2"><div class="mt-1.5 w-2 h-2 rounded-full bg-red-400 shrink-0"></div>Gestion individuelle des bornes inacceptable à l'échelle du site</li>
                                     </ul>
                                 </div>
                             </div>
@@ -637,89 +717,150 @@
                             <!-- Section 3 -->
                             <div>
                                 <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3">
-                                    <span class="bg-amber-500 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">3</span> Choix Architectural : Aruba Instant + FortiGate
+                                    <span class="bg-amber-500 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">3</span> Solution Retenue : FortiAP + FortiGate Controller
                                 </h2>
-                                <p class="text-slate-700 leading-relaxed text-justify mb-5">Après étude comparative, la solution retenue combine :</p>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                                    <div class="bg-blue-50 border border-blue-200 rounded-xl p-5">
-                                        <div class="font-bold text-blue-800 mb-2 flex items-center gap-2"><i class="fa-solid fa-wifi"></i> Aruba Instant (IAP)</div>
-                                        <p class="text-xs text-slate-600 leading-relaxed">Contrôleur <strong>virtuel intégré</strong> aux bornes (pas de matériel dédié). L'une des bornes élit automatiquement un <code>Virtual Controller</code> qui gère l'ensemble du cluster via le protocole <code>ADP</code>. Configuration centralisée via interface web unifiée.</p>
+                                <p class="text-slate-700 leading-relaxed text-justify mb-5">La solution s'appuie sur l'intégration native <strong>FortiAP + FortiOS</strong>. Le FortiGate intègre nativement un module <em>FortiAP Manager</em> : il joue à la fois le rôle de pare-feu et de contrôleur WiFi — un seul équipement, une seule interface.</p>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
+                                    <div class="bg-orange-50 border border-orange-200 rounded-xl p-4 text-center">
+                                        <i class="fa-solid fa-shield-halved text-2xl text-orange-600 mb-2"></i>
+                                        <div class="font-bold text-slate-800 text-sm">FortiGate FGT-80FPOE</div>
+                                        <div class="text-xs text-slate-500 mt-1">Pare-feu + Contrôleur WiFi</div>
                                     </div>
-                                    <div class="bg-orange-50 border border-orange-200 rounded-xl p-5">
-                                        <div class="font-bold text-orange-800 mb-2 flex items-center gap-2"><i class="fa-solid fa-shield-halved"></i> FortiGate (Pare-feu)</div>
-                                        <p class="text-xs text-slate-600 leading-relaxed">Centralise le <strong>routage inter-VLAN</strong>, les serveurs <code>DHCP</code>, la traduction d'adresses (<code>NAT</code>) et les politiques de filtrage. Isole hermétiquement le trafic invité du réseau interne.</p>
+                                    <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 text-center">
+                                        <i class="fa-solid fa-wifi text-2xl text-blue-600 mb-2"></i>
+                                        <div class="font-bold text-slate-800 text-sm">FortiAP FAP-231G / 234G</div>
+                                        <div class="text-xs text-slate-500 mt-1">Bornes WiFi 6 tri-band</div>
+                                    </div>
+                                    <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 text-center">
+                                        <i class="fa-solid fa-plug text-2xl text-emerald-600 mb-2"></i>
+                                        <div class="font-bold text-slate-800 text-sm">Switch PoE+</div>
+                                        <div class="text-xs text-slate-500 mt-1">Alimentation & connectivité</div>
                                     </div>
                                 </div>
-                                <p class="text-slate-700 text-sm leading-relaxed">L'uplink entre le switch PoE et le FortiGate est configuré en <code>trunk 802.1Q</code> pour transporter les deux VLANs sur un seul câble physique.</p>
+                                <p class="text-slate-700 text-sm leading-relaxed">Architecture <strong>"thin AP"</strong> : les bornes FortiAP n'ont aucune intelligence propre. Toute la configuration (SSIDs, sécurité, VLAN, firmware) est poussée depuis le FortiGate via le protocole <code>CAPWAP</code>.</p>
                             </div>
 
                             <!-- Section 4 -->
                             <div>
                                 <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3">
-                                    <span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">4</span> Conception : Plan d'Adressage & Architecture
+                                    <span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">4</span> Conception : Double SSID & Plan Radio
                                 </h2>
-                                <p class="text-slate-700 leading-relaxed text-justify mb-5">Deux VLANs sont définis, avec des plages d'adressage distinctes et des serveurs DHCP dédiés sur le FortiGate :</p>
+                                <p class="text-slate-700 leading-relaxed text-justify mb-5">Chaque borne FortiAP diffuse les <strong>2 SSIDs</strong> simultanément sur les radios <code>R1</code> (2.4 GHz) et <code>R2</code> (5 GHz). La radio <code>R3</code> (6 GHz) est réservée aux futurs usages en mode tunnel.</p>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                                     <div class="bg-blue-50 border border-blue-200 rounded-xl p-4">
-                                        <div class="text-xl font-black text-blue-700 mb-1">VLAN 30 — Interne</div>
+                                        <div class="font-black text-blue-700 text-lg mb-2">SSID <code class="text-base">WIFI-PRO</code></div>
                                         <div class="text-xs space-y-1 text-slate-700">
-                                            <div><code>192.168.30.0/24</code></div>
-                                            <div>SSID : <code>Rouby-Interne</code></div>
-                                            <div>Sécurité : <code>WPA2-PSK</code></div>
-                                            <div>Accès : LAN + Internet</div>
+                                            <div>Réseau : Personnel interne</div>
+                                            <div>Sécurité : <code>WPA2</code></div>
+                                            <div>Accès : LAN interne + Internet</div>
+                                            <div>IP clients : <code>10.83.x.x/24</code></div>
                                         </div>
                                     </div>
                                     <div class="bg-amber-50 border border-amber-200 rounded-xl p-4">
-                                        <div class="text-xl font-black text-amber-700 mb-1">VLAN 40 — Invités</div>
+                                        <div class="font-black text-amber-700 text-lg mb-2">SSID <code class="text-base">WIFI-GUEST</code></div>
                                         <div class="text-xs space-y-1 text-slate-700">
-                                            <div><code>192.168.40.0/24</code></div>
-                                            <div>SSID : <code>Rouby-Invites</code></div>
-                                            <div>Sécurité : Portail Captif</div>
+                                            <div>Réseau : Général / Invités</div>
+                                            <div>Sécurité : <code>WPA2</code></div>
                                             <div>Accès : Internet uniquement</div>
+                                            <div>IP clients : <code>10.83.2.x/24</code></div>
                                         </div>
                                     </div>
                                 </div>
-                                <p class="text-slate-700 text-sm leading-relaxed">Les bornes Aruba sont connectées sur des ports <code>PoE+</code> du switch, configurés en <code>trunk</code> autorisant les VLANs 30 et 40 tagués. Chaque borne diffuse les deux <code>SSID</code> simultanément.</p>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
+                                    <img src="Fortinet/Casibel%20(borne)/Liste%20wifi.png" alt="Les 2 SSIDs configurés sur FortiGate" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                                    <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-wifi mr-1"></i> Les 2 WiFi SSIDs déclarés sur FortiGate : <code>WIFI-PRO</code> & <code>WIFI-GUEST</code></p>
+                                </div>
                             </div>
 
                             <!-- Section 5 -->
                             <div>
                                 <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3">
-                                    <span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">5</span> Configuration Aruba Instant — Contrôleur Virtuel
+                                    <span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">5</span> Configuration FortiAP sur FortiGate (FortiOS)
                                 </h2>
-                                <p class="text-slate-700 leading-relaxed text-justify mb-5">À la mise sous tension, les bornes s'auto-découvrent via le protocole <code>ADP (Aruba Discovery Protocol)</code>. La borne ayant la plus grande adresse MAC est automatiquement élue <strong>Virtual Controller</strong>. L'interface d'administration est accessible sur l'IP virtuelle du cluster.</p>
+                                <p class="text-slate-700 leading-relaxed text-justify mb-5">Deux profils FortiAP ont été créés dans <strong>FortiOS → WiFi &amp; Switch Controller → FortiAP Profiles</strong>, un par modèle de borne. Chaque profil définit les bandes radio actives et les SSIDs assignés :</p>
 
                                 <div class="bg-slate-900 rounded-xl p-5 mb-6 text-sm font-mono">
-                                    <p class="text-slate-400 text-xs uppercase tracking-wider mb-3 font-bold">// Paramétrage SSID dans l'interface Aruba Instant</p>
-                                    <p class="text-emerald-400">SSID <code class="bg-transparent text-yellow-300 p-0">"Rouby-Interne"</code></p>
-                                    <p class="text-slate-300 ml-4">→ Security  : <code class="bg-transparent text-sky-300 p-0">WPA2-Personal</code> (passphrase)</p>
-                                    <p class="text-slate-300 ml-4">→ VLAN      : <code class="bg-transparent text-sky-300 p-0">30</code> (tagged uplink)</p>
-                                    <p class="text-slate-300 ml-4">→ Band      : <code class="bg-transparent text-sky-300 p-0">2.4 GHz + 5 GHz</code></p>
-                                    <p class="text-emerald-400 mt-3">SSID <code class="bg-transparent text-yellow-300 p-0">"Rouby-Invites"</code></p>
-                                    <p class="text-slate-300 ml-4">→ Security  : <code class="bg-transparent text-sky-300 p-0">Captive Portal</code> (page d'accueil)</p>
-                                    <p class="text-slate-300 ml-4">→ VLAN      : <code class="bg-transparent text-sky-300 p-0">40</code> (tagged uplink)</p>
-                                    <p class="text-slate-300 ml-4">→ Client Isolation : <code class="bg-transparent text-sky-300 p-0">Enabled</code></p>
+                                    <p class="text-slate-400 text-xs uppercase tracking-wider mb-3 font-bold">// FortiAP Profiles — FortiGate FGT-80FPOE-CLIENT-B-SITE</p>
+                                    <p class="text-emerald-400">Profil <code class="bg-transparent text-yellow-300 p-0">FAP231G-ROUBY</code>  (modèle FAP-231G)</p>
+                                    <p class="text-slate-300 ml-4">R1 : <code class="bg-transparent text-sky-300 p-0">2.4 GHz 802.11ax/n/g</code> → WIFI-PRO + WIFI-GUEST</p>
+                                    <p class="text-slate-300 ml-4">R2 : <code class="bg-transparent text-sky-300 p-0">5 GHz 802.11ax/ac/n/a</code> → WIFI-PRO + WIFI-GUEST</p>
+                                    <p class="text-slate-300 ml-4">R3 : <code class="bg-transparent text-sky-300 p-0">6 GHz 802.11ax</code>      → All Tunnel Mode SSIDs</p>
+                                    <p class="text-emerald-400 mt-3">Profil <code class="bg-transparent text-yellow-300 p-0">FAP234G-ROUBY</code>  (modèle FAP-234G)</p>
+                                    <p class="text-slate-300 ml-4">R1/R2 : idem FAP231G — R3 : <code class="bg-transparent text-sky-300 p-0">Dedicated Monitor</code></p>
+                                    <p class="text-slate-400 text-xs uppercase tracking-wider mt-4 mb-2 font-bold">// Autorisation des bornes (Managed FortiAPs → Authorize)</p>
+                                    <p class="text-emerald-400">Firmware poussé automatiquement : <code class="bg-transparent text-yellow-300 p-0">FP231G-v7.4-build0713</code></p>
                                 </div>
-                                <p class="text-slate-700 text-sm leading-relaxed">L'option <strong>Client Isolation</strong> empêche également les clients du même SSID invité de communiquer entre eux (protection contre les scans horizontaux sur le réseau Guest).</p>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
+                                        <img src="Fortinet/Casibel%20(borne)/Interface.png" alt="Profils FortiAP — bandes et SSIDs" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                                        <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-list mr-1"></i> Profils FortiAP — Tri-band + SSIDs assignés par radio</p>
+                                    </div>
+                                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
+                                        <img src="Fortinet/Casibel%20(borne)/Config%20borne.png" alt="Config détaillée borne Quai Chargement" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                                        <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-gear mr-1"></i> Borne "Quai Chargement" — Firmware, radios & statut <code>Connected</code></p>
+                                    </div>
+                                </div>
+
+                                <!-- Photos installation physique -->
+                                <div class="bg-slate-50 rounded-2xl border border-slate-200 p-5">
+                                    <h3 class="text-sm font-bold text-slate-700 mb-4 flex items-center gap-2 uppercase tracking-wider">
+                                        <i class="fa-solid fa-camera text-blue-500"></i> Installation physique sur site — Poses des bornes FortiAP
+                                    </h3>
+                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                                            <img src="Fortinet/Casibel%20(borne)/photo%20installations/M%C3%A9dia%20(1).jpg" alt="Installation AP 1" class="w-full h-32 object-cover">
+                                            <p class="text-center text-[10px] text-slate-400 p-1.5 font-medium">Fixation plafond</p>
+                                        </div>
+                                        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                                            <img src="Fortinet/Casibel%20(borne)/photo%20installations/M%C3%A9dia%20(5).jpg" alt="Installation AP 2" class="w-full h-32 object-cover">
+                                            <p class="text-center text-[10px] text-slate-400 p-1.5 font-medium">Câblage RJ45 PoE+</p>
+                                        </div>
+                                        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                                            <img src="Fortinet/Casibel%20(borne)/photo%20installations/M%C3%A9dia%20(10).jpg" alt="Installation AP 3" class="w-full h-32 object-cover">
+                                            <p class="text-center text-[10px] text-slate-400 p-1.5 font-medium">Zone entrepôt SEC</p>
+                                        </div>
+                                        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                                            <img src="Fortinet/Casibel%20(borne)/photo%20installations/M%C3%A9dia%20(15).jpg" alt="Installation AP 4" class="w-full h-32 object-cover">
+                                            <p class="text-center text-[10px] text-slate-400 p-1.5 font-medium">Couloir vestiaire</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-slate-400 mt-3 text-center italic">Cliquer sur une photo pour l'agrandir <i class="fa-solid fa-magnifying-glass-plus ml-1"></i></p>
+                                </div>
                             </div>
 
                             <!-- Section 6 -->
                             <div>
                                 <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3">
-                                    <span class="bg-orange-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">6</span> Sécurisation des Flux sur FortiGate
+                                    <span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">6</span> Dashboard FortiGate — Supervision Centralisée
                                 </h2>
-                                <p class="text-slate-700 leading-relaxed text-justify mb-5">L'ensemble de la logique de sécurité est centralisé sur le <strong>FortiGate</strong>. J'ai créé deux interfaces VLAN virtuelles sur le port LAN physique, chacune avec son propre serveur <code>DHCP</code> :</p>
+                                <p class="text-slate-700 leading-relaxed text-justify mb-5">Le FortiGate affiche en temps réel l'état de toutes les bornes (<code>Online</code> / <code>Offline</code>), l'utilisation des canaux radio, le nombre de clients connectés et la version de firmware. La supervision est accessible via l'interface <code>HTTPS</code> du FortiGate depuis n'importe où.</p>
 
-                                <div class="bg-slate-900 rounded-xl p-5 mb-6 text-sm font-mono">
-                                    <p class="text-slate-400 text-xs uppercase tracking-wider mb-3 font-bold">// Interfaces FortiGate (Network → Interfaces)</p>
-                                    <p class="text-emerald-400"><code class="bg-transparent text-yellow-300 p-0">VLAN30-Interne</code>  | port1.<code class="bg-transparent text-sky-300 p-0">30</code> | IP: <code class="bg-transparent text-sky-300 p-0">192.168.30.1/24</code></p>
-                                    <p class="text-emerald-400 mt-1"><code class="bg-transparent text-yellow-300 p-0">VLAN40-Invites</code>  | port1.<code class="bg-transparent text-sky-300 p-0">40</code> | IP: <code class="bg-transparent text-sky-300 p-0">192.168.40.1/24</code></p>
-                                    <p class="text-slate-400 text-xs uppercase tracking-wider mt-4 mb-3 font-bold">// Politiques de filtrage (Policy & Objects → Firewall Policy)</p>
-                                    <p class="text-emerald-400">Règle 1 : VLAN30 → WAN  | <code class="bg-transparent text-green-400 p-0">ACCEPT</code> + NAT</p>
-                                    <p class="text-emerald-400 mt-1">Règle 2 : VLAN40 → WAN  | <code class="bg-transparent text-green-400 p-0">ACCEPT</code> + NAT (DNS, HTTP/S uniquement)</p>
-                                    <p class="text-red-400 mt-1 font-bold">Règle 3 : VLAN40 → VLAN30 | <code class="bg-transparent text-red-300 p-0">DENY</code> (isolation totale)</p>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                                    <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 text-center">
+                                        <div class="text-3xl font-black text-emerald-600">10+</div>
+                                        <div class="text-sm font-bold text-slate-700 mt-1">Bornes déployées</div>
+                                    </div>
+                                    <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 text-center">
+                                        <div class="text-3xl font-black text-blue-600">2</div>
+                                        <div class="text-sm font-bold text-slate-700 mt-1">SSIDs actifs</div>
+                                    </div>
+                                    <div class="bg-purple-50 border border-purple-200 rounded-xl p-4 text-center">
+                                        <div class="text-3xl font-black text-purple-600">100%</div>
+                                        <div class="text-sm font-bold text-slate-700 mt-1">Bornes Online</div>
+                                    </div>
                                 </div>
-                                <p class="text-slate-700 text-sm leading-relaxed">La règle 3 est la règle de sécurité critique : elle bloque tout trafic provenant du réseau invité vers le réseau interne, rendant l'isolation complète et indépendante de la configuration des bornes.</p>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
+                                        <img src="Fortinet/Casibel%20(borne)/Liste%20Borne.png" alt="Dashboard toutes les bornes" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                                        <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-desktop mr-1"></i> Dashboard FortiGate — Bornes <code>Online</code>, utilisation canaux radio</p>
+                                    </div>
+                                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
+                                        <img src="Fortinet/Casibel%20(borne)/Liste%20borne%202.png" alt="Détail bornes SEC Online" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                                        <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-list-check mr-1"></i> Bornes SEC E/F/K/M — Firmware unifié, statut <code>Online</code></p>
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Section 7 -->
@@ -727,26 +868,34 @@
                                 <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3">
                                     <span class="bg-slate-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">7</span> Tests de Validation & Bilan
                                 </h2>
+                                <p class="text-slate-700 leading-relaxed text-justify mb-5">Des tests de connexion ont été effectués depuis plusieurs zones du bâtiment (quai, vestiaires, salles SEC). Les niveaux de signal mesurés sont compris entre <strong>-64 et -67 dBm</strong>, conformes aux standards industriels (seuil critique : -70 dBm).</p>
+
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm mb-6">
+                                    <img src="Fortinet/Casibel%20(borne)/Appareil%20connecter.png" alt="Appareils connectés avec niveau de signal" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                                    <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-mobile-screen mr-1"></i> Appareils connectés au SSID <code>WIFI-GUEST</code> — Signal <code>-64 à -67 dBm</code>, Canal 153</p>
+                                </div>
+
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                                     <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4">
                                         <h4 class="font-bold text-emerald-800 text-sm mb-3 flex items-center gap-2"><i class="fa-solid fa-circle-check"></i> Tests réussis</h4>
                                         <ul class="space-y-2 text-xs text-slate-700">
-                                            <li class="flex items-start gap-2"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div>Couverture radio validée sur tout le site</li>
-                                            <li class="flex items-start gap-2"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div>Client VLAN30 → ping vers serveurs LAN : <code>OK</code></li>
-                                            <li class="flex items-start gap-2"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div>Client VLAN40 → ping vers Internet : <code>OK</code></li>
-                                            <li class="flex items-start gap-2"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div>Portail captif fonctionnel (affichage page d'accueil)</li>
+                                            <li class="flex items-start gap-2"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div>Couverture homogène sur toutes les zones du site ✓</li>
+                                            <li class="flex items-start gap-2"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div>Signal <code>-64 à -67 dBm</code> sur tous les points de test ✓</li>
+                                            <li class="flex items-start gap-2"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div>Toutes les bornes <code>Online</code> et firmware unifié ✓</li>
+                                            <li class="flex items-start gap-2"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div>Gestion centralisée depuis FortiGate opérationnelle ✓</li>
                                         </ul>
                                     </div>
-                                    <div class="bg-red-50 border border-red-200 rounded-xl p-4">
-                                        <h4 class="font-bold text-red-800 text-sm mb-3 flex items-center gap-2"><i class="fa-solid fa-shield-halved"></i> Tests d'isolation validés</h4>
+                                    <div class="bg-blue-50 border border-blue-200 rounded-xl p-4">
+                                        <h4 class="font-bold text-blue-800 text-sm mb-3 flex items-center gap-2"><i class="fa-solid fa-lightbulb"></i> Compétences mobilisées</h4>
                                         <ul class="space-y-2 text-xs text-slate-700">
-                                            <li class="flex items-start gap-2"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-red-500 shrink-0"></div>Client VLAN40 → ping VLAN30 : <code>Timeout</code> ✓</li>
-                                            <li class="flex items-start gap-2"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-red-500 shrink-0"></div>Scan Nmap VLAN40 → VLAN30 : <code>0 hosts up</code> ✓</li>
-                                            <li class="flex items-start gap-2"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-red-500 shrink-0"></div>Isolation client-à-client (VLAN40) : <code>OK</code> ✓</li>
+                                            <li class="flex items-start gap-2"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div>Protocole <code>CAPWAP</code> (contrôle FortiAP)</li>
+                                            <li class="flex items-start gap-2"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div>Profils FortiAP multi-bandes (WiFi 6 tri-band)</li>
+                                            <li class="flex items-start gap-2"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div>Étude radio en environnement industriel</li>
+                                            <li class="flex items-start gap-2"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div>FortiGate comme point de contrôle unique (pare-feu + WiFi)</li>
                                         </ul>
                                     </div>
                                 </div>
-                                <p class="text-slate-700 leading-relaxed text-justify">Ce projet m'a permis de mettre en œuvre une architecture WiFi professionnelle complète : maîtrise du concept de <code>contrôleur virtuel</code> Aruba, configuration d'un <code>trunk 802.1Q</code> multi-VLAN, et déploiement de politiques de filtrage sur FortiGate. L'ensemble de la solution est opérationnel et conforme au cahier des charges sécurité.</p>
+                                <p class="text-slate-700 leading-relaxed text-justify">Ce projet valide ma maîtrise de l'écosystème <strong>Fortinet</strong> dans sa dimension WiFi : configuration de profils <code>FortiAP</code>, gestion centralisée via <code>FortiOS</code>, et déploiement en conditions industrielles réelles. L'architecture est robuste, évolutive et cohérente avec le pare-feu existant.</p>
                             </div>
                         </div>
                     </div>
@@ -839,10 +988,18 @@
         <p class="text-xs mt-1">Portfolio BTS SIO (SISR) — N° candidat : 2314981174 — Session 2026</p>
     </footer>
 
+    <!-- LIGHTBOX FULLSCREEN -->
+    <div id="lightbox" class="hidden fixed inset-0 z-[200] flex items-center justify-center bg-black/93 backdrop-blur-sm cursor-zoom-out" onclick="closeLightbox()">
+        <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white bg-white/20 hover:bg-white/35 w-11 h-11 rounded-full flex items-center justify-center transition-colors z-10 text-xl">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img id="lightbox-img" src="" class="max-w-[96vw] max-h-[93vh] rounded-xl shadow-2xl object-contain select-none" onclick="event.stopPropagation()">
+    </div>
+
     <!-- MODAL PETITS PROJETS -->
     <div id="modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm" onclick="closeModal()">
-        <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden" onclick="event.stopPropagation()">
-            <div class="bg-slate-800 text-white p-5 flex justify-between items-start gap-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full overflow-hidden flex flex-col max-h-[90vh]" onclick="event.stopPropagation()">
+            <div class="bg-slate-800 text-white p-5 flex justify-between items-start gap-4 shrink-0">
                 <div class="flex items-center gap-3">
                     <div class="bg-slate-700 p-2.5 rounded-lg shrink-0">
                         <i id="modal-icon" class="text-xl"></i>
@@ -856,12 +1013,16 @@
                     <i class="fa-solid fa-xmark text-lg"></i>
                 </button>
             </div>
-            <div class="p-6">
+            <div class="p-6 overflow-y-auto">
                 <div class="mb-5">
                     <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Déroulement & Intervention</span>
                     <p id="modal-desc" class="text-sm text-slate-700 mt-2 leading-relaxed">Description ici.</p>
                 </div>
-                <div class="mt-5 pt-4 border-t border-slate-100">
+                <div id="modal-images" class="hidden mb-5 pt-4 border-t border-slate-100">
+                    <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-3"><i class="fa-solid fa-camera mr-1"></i> Captures d'écran réelles</span>
+                    <div id="modal-images-grid" class="grid grid-cols-2 gap-3"></div>
+                </div>
+                <div class="pt-4 border-t border-slate-100">
                     <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-3">Environnement Technique</span>
                     <div id="modal-skills" class="flex flex-wrap gap-2"></div>
                 </div>
@@ -920,10 +1081,28 @@
             skillsEl.innerHTML = p.skills.map(s =>
                 `<span class="bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1.5 rounded-lg border border-blue-100">${s}</span>`
             ).join('');
+            // Images
+            const imagesSection = document.getElementById('modal-images');
+            const imagesGrid = document.getElementById('modal-images-grid');
+            if (p.images && p.images.length > 0) {
+                const cols = p.images.length === 1 ? 'grid-cols-1' : 'grid-cols-2';
+                imagesGrid.className = `grid ${cols} gap-3`;
+                imagesGrid.innerHTML = p.images.map(img =>
+                    `<div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden cursor-zoom-in hover:border-blue-400 transition-colors" onclick="event.stopPropagation();openLightbox('${img}')">
+                        <img src="${img}" class="w-full object-cover hover:opacity-90 transition-opacity" style="max-height:160px;object-fit:cover;" alt="Capture">
+                    </div>`
+                ).join('');
+                imagesSection.classList.remove('hidden');
+            } else {
+                imagesSection.classList.add('hidden');
+                imagesGrid.innerHTML = '';
+            }
             document.getElementById('modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
         }
         function closeModal() {
             document.getElementById('modal').classList.add('hidden');
+            document.body.style.overflow = '';
         }
 
         // --- 5. TABLEAU DES RÉALISATIONS (source : Tableau de synthèse BTS SIO 2026) ---
@@ -936,7 +1115,7 @@
                     cat: "Formation", type: "Formation",
                     period: "01/12/2024 – 15/12/2024",
                     icon: "fa-solid fa-server text-purple-500",
-                    desc: "Déploiement d'une solution ITSM <strong>GLPI</strong> sur un serveur <strong>Ubuntu Server</strong>. Configuration du stack <code>LAMP</code> (Apache2, MariaDB, PHP). Intégration <code>LDAP</code> avec l'Active Directory pour une authentification centralisée (<code>SSO</code>) des techniciens et utilisateurs.",
+                    desc: "<strong>Situation :</strong> Formation pratique au déploiement d'une solution ITSM open-source sur Linux.<br><br><strong>Procédure :</strong> Installation d'<strong>Ubuntu Server 22.04</strong> en machine virtuelle. Configuration du stack <code>LAMP</code> (Apache2, MariaDB, PHP 8.1). Téléchargement et installation de <strong>GLPI 10.x</strong> via CLI. Intégration <code>LDAP/AD</code> pour authentification centralisée <code>SSO</code>. Paramétrage des profils techniciens, des catégories de tickets et des SLA.<br><br><strong>Résultat :</strong> Plateforme ITSM opérationnelle avec gestion des incidents, des assets et authentification via AD.",
                     skills: ["Ubuntu Server", "GLPI", "LAMP", "LDAP/AD", "ITSM"]
                 },
                 {
@@ -945,7 +1124,8 @@
                     cat: "Formation", type: "Formation",
                     period: "01/01/2025 – 10/01/2025",
                     icon: "fa-solid fa-users text-blue-500",
-                    desc: "Installation d'un contrôleur de domaine <strong>Windows Server 2022</strong> (<code>Active Directory DS</code>, <code>DNS</code>, <code>DHCP</code>). Jonction de postes clients Windows 10/11 et Linux Debian au domaine. Déploiement de <code>GPO</code> pour les restrictions d'accès et la distribution logicielle.",
+                    desc: "<strong>Situation :</strong> Mise en place d'un environnement domaine Windows complet en formation.<br><br><strong>Procédure :</strong> Installation de <strong>Windows Server 2022</strong>, promotion en contrôleur de domaine (<code>Active Directory DS</code>). Configuration des rôles <code>DNS</code> et <code>DHCP</code>. Création de l'arborescence d'<code>OU</code> (Administratifs, Elèves, Professeurs, Ordinateurs). Jonction de postes Windows 10/11. Déploiement de <code>GPO</code> pour restrictions, fond d'écran et distribution logicielle.<br><br><strong>Résultat :</strong> Domaine fonctionnel avec 10+ postes joints, GPO appliquées, arborescence AD structurée.",
+                    images: ["AD/arborescence%20des%20groupes.png", "AD/Modification%20user.png"],
                     skills: ["Windows Server 2022", "Active Directory", "GPO", "DNS", "DHCP"]
                 },
                 {
@@ -954,7 +1134,7 @@
                     cat: "Formation", type: "Formation",
                     period: "10/03/2025 – 20/03/2025",
                     icon: "fa-solid fa-box text-orange-500",
-                    desc: "Création et configuration d'environnements virtualisés sous <strong>Oracle VM VirtualBox</strong>. Paramétrage des adaptateurs réseau (<code>NAT</code>, réseau interne, pont). Allocation des ressources vCPU/RAM, gestion des snapshots et des disques virtuels <code>VDI</code>.",
+                    desc: "<strong>Situation :</strong> Apprentissage de la virtualisation type 2 pour créer des environnements de test isolés.<br><br><strong>Procédure :</strong> Installation d'<strong>Oracle VM VirtualBox</strong>. Création de VM Windows 10 et Ubuntu. Paramétrage des adaptateurs réseau : <code>NAT</code> (accès internet), réseau interne (isolation), pont (accès LAN). Allocation de ressources <code>vCPU</code>/RAM adaptées. Gestion des snapshots et des disques virtuels <code>VDI</code>. Configuration des dossiers partagés hôte/invité.<br><br><strong>Résultat :</strong> Maîtrise de la création et gestion de VM, utilisées pour tous les labs suivants.",
                     skills: ["VirtualBox", "Virtualisation", "Réseau NAT", "Snapshots", "Linux"]
                 },
                 {
@@ -963,7 +1143,7 @@
                     cat: "Formation", type: "Formation",
                     period: "01/10/2024 – 01/05/2026",
                     icon: "fa-solid fa-globe text-indigo-500",
-                    desc: "Conception et développement d'un site portfolio en <code>HTML/CSS</code> avec le framework <strong>Tailwind CSS</strong>. Intégration dynamique de flux <code>RSS</code> via l'API rss2json. Hébergement sur <strong>GitHub Pages</strong> avec pipeline de déploiement continu.",
+                    desc: "<strong>Situation :</strong> Création d'un portfolio numérique pour présenter mes compétences à l'épreuve E4 du BTS SIO.<br><br><strong>Procédure :</strong> Conception de la structure HTML5 sémantique. Intégration du framework <strong>Tailwind CSS</strong> (CDN) pour le responsive design. Développement JavaScript vanilla : navigation par onglets, filtres dynamiques, modal, génération de cartes depuis des tableaux de données. Intégration de flux <code>RSS</code> (CERT-FR, IT-Connect) via l'API <code>rss2json</code>.<br><br><strong>Résultat :</strong> Portfolio complet, responsive, présenté lors de l'épreuve E4.",
                     skills: ["HTML/CSS", "Tailwind CSS", "JavaScript", "GitHub Pages", "RSS API"]
                 },
                 {
@@ -972,64 +1152,70 @@
                     cat: "Formation", type: "Formation",
                     period: "01/10/2025 – 01/05/2026",
                     icon: "fa-solid fa-graduation-cap text-teal-500",
-                    desc: "Utilisation de la plateforme <strong>Itway</strong> pour la validation de compétences certifiantes en administration système et réseaux. Modules couvrant les protocoles réseaux fondamentaux (<code>TCP/IP</code>, <code>DNS</code>, <code>DHCP</code>), la sécurité et l'administration <code>Windows Server</code> / Linux.",
+                    desc: "<strong>Situation :</strong> Formation certifiante complémentaire au BTS SIO via plateforme e-learning.<br><br><strong>Contenu :</strong> Modules d'administration système et réseaux. Protocoles fondamentaux : <code>TCP/IP</code>, <code>DNS</code>, <code>DHCP</code>, <code>VLAN</code>. Sécurité des accès (ACL, pare-feu, VPN). Administration <strong>Windows Server</strong> et Linux. Labs pratiques en environnement simulé.<br><br><strong>Résultat :</strong> Validation de compétences certifiantes complémentaires aux projets réalisés en entreprise.",
                     skills: ["Certification", "Réseaux TCP/IP", "Sécurité", "Windows Server", "Linux"]
                 },
                 // ── EXANTIS — 1ÈRE ANNÉE ──────────────────────────────────
                 {
                     id: 106,
-                    title: "Reconditionnement & Déploiement Postes",
+                    title: "Reconditionnement & Préparation Postes",
                     cat: "Exantis", type: "Exantis",
                     period: "01/10/2024 – 01/05/2026",
                     icon: "fa-solid fa-hard-drive text-slate-500",
-                    desc: "Maintenance matérielle de postes clients : ajout de barrettes <code>RAM</code>, remplacement de disques <code>HDD</code> par <code>SSD NVMe</code>. Masterisation via <strong>Clonezilla</strong> ou image <code>WIM</code>. Configuration post-déploiement : jonction domaine <code>AD</code>, paramètres <code>TCP/IP</code>, mapping des imprimantes réseau.",
-                    skills: ["Hardware", "Clonezilla", "Masterisation WIM", "Active Directory", "Windows 11"]
+                    desc: "<strong>Situation :</strong> Reconditionnement et déploiement de postes clients pour plusieurs établissements.<br><br><strong>Procédure :</strong> Réception et inventaire des machines dans l'atelier Exantis. Remplacement de composants : <code>HDD → SSD NVMe</code>, ajout de <code>RAM</code> DDR4. Installation propre de <strong>Windows 11 Pro</strong>. Jonction au domaine <code>Active Directory</code> client. Paramétrage <code>TCP/IP</code>, mapping imprimantes réseau, installation logiciels métier. Livraison et mise en service sur site.<br><br><strong>Résultat :</strong> Plusieurs dizaines de postes reconditionnés et déployés chez les clients Exantis.",
+                    images: ["Atelier%20et%20prepa%20poste/Atelier.png", "Atelier%20et%20prepa%20poste/Bureau.png"],
+                    skills: ["Hardware", "Windows 11", "Active Directory", "TCP/IP", "Déploiement"]
                 },
                 {
                     id: 107,
-                    title: "Support Ticketing N1/N2 (GLPI)",
+                    title: "Support Ticketing N1/N2 — FreshService & Atera",
                     cat: "Exantis", type: "Exantis",
                     period: "01/10/2024 – 01/05/2026",
-                    icon: "fa-solid fa-wrench text-amber-500",
-                    desc: "Gestion quotidienne de tickets d'incidents matériels et logiciels via <strong>GLPI</strong>. Diagnostic de pannes, prise en main à distance (<code>RMM</code>), escalade <code>N2</code>, et documentation des solutions en base de connaissance. Suivi des <code>SLA</code> et relation client multi-sites.",
-                    skills: ["GLPI", "Support N1/N2", "Prise en main distante", "SLA", "Diagnostic"]
+                    icon: "fa-solid fa-headset text-amber-500",
+                    desc: "<strong>Situation :</strong> Gestion quotidienne des incidents clients via <strong>FreshService</strong> (ITSM) et <strong>Atera</strong> (RMM).<br><br><strong>Procédure :</strong> Réception et qualification des tickets entrants (téléphone, email, portail). Diagnostic à distance via <strong>Atera RMM</strong> : consultation des informations poste (IP, OS, RAM, disques, utilisateur connecté). Prise en main distante (<code>AnyDesk</code>, <code>Splashtop</code>). Résolution N1 ou escalade N2. Documentation de la solution et clôture ticket. Respect des <code>SLA</code> contractuels.<br><br><strong>Résultat :</strong> Traitement de plusieurs centaines de tickets sur la durée de l'alternance, multi-clients.",
+                    images: ["Fresh%20Service/Ticket%20general.png", "Atera/Info%20poste.png"],
+                    skills: ["FreshService", "Atera RMM", "Support N1/N2", "AnyDesk/Splashtop", "SLA"]
                 },
                 {
                     id: 108,
-                    title: "Gestion Utilisateurs O365 & AD",
+                    title: "Gestion Utilisateurs Microsoft 365 & AD",
                     cat: "Exantis", type: "Exantis",
                     period: "01/10/2024 – 01/05/2026",
                     icon: "fa-solid fa-cloud text-blue-400",
-                    desc: "Administration des <em>tenants</em> <strong>Microsoft 365</strong> : création de boîtes mail, attribution de licences, groupes <code>Teams</code> et <code>SharePoint</code>. Gestion des comptes <code>Active Directory</code> on-premise : <code>OU</code>, groupes de sécurité, réinitialisation de mots de passe et audit des droits.",
-                    skills: ["Microsoft 365", "Azure AD", "Exchange Online", "Active Directory", "Teams"]
+                    desc: "<strong>Situation :</strong> Administration des identités et licences pour les clients multi-tenants d'Exantis.<br><br><strong>Procédure :</strong> Création/modification/désactivation de comptes <code>Active Directory</code> on-premise. Gestion des <code>OU</code> (unités d'organisation) et groupes de sécurité. Synchronisation <code>Azure AD Connect</code>. Administration des tenants <strong>Microsoft 365</strong> : attribution de licences (<em>Business Standard/Basic</em>), création de boîtes partagées <code>Exchange Online</code>, groupes <code>Teams</code> et <code>SharePoint</code>. Audit des droits et rapport de conformité.<br><br><strong>Résultat :</strong> Gestion autonome de plusieurs tenants M365, arborescences AD structurées pour écoles et PME.",
+                    images: ["Office%20365/Attribution%20license.png", "AD/arborescence%20des%20groupes.png"],
+                    skills: ["Microsoft 365", "Azure AD", "Exchange Online", "Active Directory", "Licences"]
                 },
                 {
                     id: 109,
-                    title: "Déploiement Outil RMM/Support",
+                    title: "Déploiement Atera RMM + SentinelOne EDR",
                     cat: "Exantis", type: "Exantis",
                     period: "01/01/2025 – 01/04/2025",
-                    icon: "fa-solid fa-gear text-indigo-500",
-                    desc: "Mise en place d'un nouvel outil <strong>RMM</strong> (Remote Monitoring & Management) pour centraliser la supervision du parc et les prises en main à distance. Déploiement de l'agent sur les postes clients via <code>GPO</code>, tests fonctionnels et rédaction de la documentation opérateur.",
-                    skills: ["RMM", "GPO", "Supervision parc", "Déploiement agents", "ITSM"]
+                    icon: "fa-solid fa-shield-halved text-indigo-500",
+                    desc: "<strong>Situation :</strong> Déploiement et configuration des outils de supervision et sécurité du parc clients Exantis.<br><br><strong>Procédure :</strong> Déploiement de l'agent <strong>Atera</strong> sur les postes via <code>GPO</code> et script <code>PowerShell</code>. Configuration du tableau de bord : alertes disques, disponibilité des serveurs, taux de patching. Création de scripts d'automatisation (infos RAM, <code>Windows Update</code>, nettoyage, sync <code>Azure AD Connect</code>). Déploiement de l'agent <strong>SentinelOne</strong> (EDR/XDR) sur les endpoints — gestion de 330+ machines sur 8 sites clients.<br><br><strong>Résultat :</strong> Parc entièrement supervisé en temps réel, agents EDR actifs sur tous les sites.",
+                    images: ["Atera/Dashboard.png", "S1/Capture%20d%27%C3%A9cran%202026-04-16%20111636.png"],
+                    skills: ["Atera RMM", "SentinelOne EDR", "PowerShell", "GPO", "Supervision"]
                 },
                 // ── EXANTIS — 2ÈME ANNÉE ─────────────────────────────────
                 {
                     id: 110,
-                    title: "Migration TSE vers Office 365",
+                    title: "Migration TSE → Microsoft 365 (RDS to Cloud)",
                     cat: "Exantis", type: "Exantis",
                     period: "01/08/2025 – 20/08/2025",
                     icon: "fa-solid fa-arrow-right-arrow-left text-sky-500",
-                    desc: "Migration d'un client depuis un serveur <code>TSE/RDS</code> (Terminal Server) vers <strong>Microsoft 365</strong>. Audit des applications métiers, tests de compatibilité, migration des profils et données utilisateurs vers <code>OneDrive</code> / <code>SharePoint</code>. Formation des utilisateurs finaux.",
-                    skills: ["RDS/TSE", "Microsoft 365", "Migration Cloud", "OneDrive", "Azure AD"]
+                    desc: "<strong>Situation :</strong> Un client utilise un serveur <code>TSE/RDS</code> (Terminal Server vieillissant) comme poste de travail mutualisé — migration vers Microsoft 365.<br><br><strong>Procédure :</strong> Audit des applications métier installées sur le <code>RDS</code>. Vérification de la compatibilité cloud. Migration des profils utilisateurs et données vers <code>OneDrive</code>/<code>SharePoint</code> via <strong>Remote Desktop Manager</strong>. Attribution des licences <code>M365 Business Standard</code>. Configuration des clients <code>Outlook</code>, <code>Teams</code>. Formation des utilisateurs finaux à la nouvelle interface. Clôture et décommissionnement du TSE.<br><br><strong>Résultat :</strong> Client migré avec succès, suppression du serveur TSE, réduction des coûts d'infrastructure.",
+                    images: ["RDM/Capture%20d%27%C3%A9cran%202026-04-15%20141203.png"],
+                    skills: ["RDS/TSE", "Microsoft 365", "OneDrive", "Remote Desktop Manager", "Migration Cloud"]
                 },
                 {
                     id: 111,
-                    title: "Régie Informatique – Écoles",
+                    title: "Régie Informatique – Établissements Scolaires",
                     cat: "Exantis", type: "Exantis",
                     period: "01/10/2024 – 01/05/2026",
-                    icon: "fa-solid fa-briefcase text-orange-500",
-                    desc: "Interventions régulières en régie sur plusieurs établissements scolaires (Trinitaire, Marie Pilla, Les Chênes, Sancta Maria). Résolution d'incidents de proximité, renouvellement de postes, brassage réseau, intégration de nouveaux équipements au domaine <code>AD</code> et assistance aux enseignants.",
-                    skills: ["Régie", "Support Proximité", "Brassage réseau", "Renouvellement Parc", "AD"]
+                    icon: "fa-solid fa-school text-orange-500",
+                    desc: "<strong>Situation :</strong> Interventions hebdomadaires en régie sur les établissements scolaires et PME clients d'Exantis (plusieurs sites, noms confidentiels).<br><br><strong>Procédure :</strong> Réception des tickets <strong>FreshService</strong> catégorie <em>Régie</em>. Connexion à distance via <code>RDP</code> pour diagnostic préalable. Déplacement sur site si nécessaire (caméras, imprimantes, réseau, postes). Interventions : brassage réseau, remplacement matériel, reconfiguration poste, intégration domaine <code>AD</code>, mise en place <code>Moodle</code>, assistance enseignants. Clôture des tickets dans FreshService avec compte-rendu.<br><br><strong>Résultat :</strong> Maintien opérationnel de plusieurs parcs informatiques, relation de confiance établie avec les équipes utilisateurs.",
+                    images: ["Fresh%20Service/Ticket%20Regie.png", "Fresh%20Service/Exemple%20rouby.png"],
+                    skills: ["Régie", "FreshService", "RDP", "Support Proximité", "Active Directory"]
                 }
             ];
 
@@ -1117,6 +1303,31 @@
             container.innerHTML = htmlContent || '<p class="col-span-3 text-center text-red-500 font-medium">Impossible de charger les flux pour le moment.</p>';
             container.dataset.loaded = "true";
         }
+
+        // --- LIGHTBOX ---
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+            document.getElementById('lightbox-img').src = '';
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') { closeLightbox(); closeModal(); }
+        });
+        // Rendre toutes les images des dossiers techniques zoomables au clic
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('#project-detail-1 img, #project-detail-2 img').forEach(img => {
+                img.classList.add('img-zoom');
+                img.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    openLightbox(this.src);
+                });
+            });
+        });
     </script>
 </body>
 </html>
