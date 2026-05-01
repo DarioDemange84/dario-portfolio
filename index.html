@@ -143,10 +143,29 @@
                 <p class="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
                     Technicien informatique en alternance, passionné par les réseaux et la sécurité des systèmes.
                 </p>
-                <div class="mt-8">
-                    <button class="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-600 transition-all shadow-lg hover:-translate-y-1">
-                        <i class="fa-solid fa-download"></i> Télécharger mon CV (PDF)
-                    </button>
+                <div class="mt-8 flex flex-wrap justify-center gap-3">
+                    <a href="cvdario.pdf" target="_blank" class="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-600 transition-all shadow-lg hover:-translate-y-1">
+                        <i class="fa-solid fa-eye"></i> Voir mon CV
+                    </a>
+                    <a href="cvdario.pdf" download class="inline-flex items-center gap-2 bg-white text-slate-700 border border-slate-200 px-6 py-3 rounded-xl font-bold hover:border-blue-300 hover:text-blue-600 transition-all shadow-sm hover:-translate-y-1">
+                        <i class="fa-solid fa-download"></i> Télécharger (PDF)
+                    </a>
+                </div>
+
+                <!-- Aperçu CV intégré -->
+                <div class="mt-10 max-w-3xl mx-auto">
+                    <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+                        <div class="bg-slate-800 px-5 py-3 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-file-pdf text-red-400"></i>
+                                <span class="text-white text-sm font-bold">CV — Dario Demange</span>
+                            </div>
+                            <a href="cvdario.pdf" target="_blank" class="text-slate-400 hover:text-white transition-colors text-xs flex items-center gap-1.5">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ouvrir en plein écran
+                            </a>
+                        </div>
+                        <iframe src="cvdario.pdf" class="w-full" style="height:860px;" title="CV Dario Demange"></iframe>
+                    </div>
                 </div>
             </div>
             <div class="mb-20">
@@ -460,6 +479,17 @@
                                 <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Prestataire</span><span class="text-slate-800 font-medium">Exantis Informatique</span></div>
                                 <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Durée</span><span class="text-slate-800 font-medium">3 jours (02–04/04/2025)</span></div>
                                 <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Rôle</span><span class="text-slate-800 font-medium">Technicien SISR</span></div>
+                                <div class="p-4 flex items-center justify-between">
+                                    <span class="font-bold text-slate-600 text-xs">Autonomie</span>
+                                    <div class="flex items-center gap-1">
+                                        <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                                        <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                                        <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                                        <span class="w-3 h-3 rounded-full bg-blue-200" style="background:linear-gradient(90deg,#3b82f6 50%,#bfdbfe 50%)"></span>
+                                        <span class="w-3 h-3 rounded-full bg-blue-100 border border-blue-200"></span>
+                                        <span class="text-[10px] text-slate-400 ml-1 font-medium">3,5 / 5</span>
+                                    </div>
+                                </div>
                                 <div class="p-4">
                                     <span class="font-bold text-slate-600 block mb-3">Technologies</span>
                                     <div class="flex flex-wrap gap-2 text-xs font-bold text-blue-700">
@@ -706,6 +736,17 @@
                                 <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Prestataire</span><span class="text-slate-800 font-medium">Exantis Informatique</span></div>
                                 <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Durée</span><span class="text-slate-800 font-medium">5 jours (15–19/09/2025)</span></div>
                                 <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Rôle</span><span class="text-slate-800 font-medium">Technicien SISR</span></div>
+                                <div class="p-4 flex items-center justify-between">
+                                    <span class="font-bold text-slate-600 text-xs">Autonomie</span>
+                                    <div class="flex items-center gap-1">
+                                        <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                                        <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                                        <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                                        <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                                        <span class="w-3 h-3 rounded-full bg-blue-100 border border-blue-200"></span>
+                                        <span class="text-[10px] text-slate-400 ml-1 font-medium">4 / 5</span>
+                                    </div>
+                                </div>
                                 <div class="p-4">
                                     <span class="font-bold text-slate-600 block mb-3">Technologies</span>
                                     <div class="flex flex-wrap gap-2 text-xs font-bold text-blue-700">
@@ -1011,6 +1052,17 @@
                                         <span class="bg-teal-50 px-2 py-1 rounded border border-teal-100">Centreon</span>
                                         <span class="bg-teal-50 px-2 py-1 rounded border border-teal-100">GLPI</span>
                                         <span class="bg-teal-50 px-2 py-1 rounded border border-teal-100">NPS/RADIUS</span>
+                                    </div>
+                                </div>
+                                <div class="p-3 flex items-center justify-between border-t border-slate-100">
+                                    <span class="font-bold text-slate-500 text-xs">Autonomie</span>
+                                    <div class="flex items-center gap-1">
+                                        <span style="width:9px;height:9px;border-radius:50%;background:#3b82f6;display:inline-block"></span>
+                                        <span style="width:9px;height:9px;border-radius:50%;background:#3b82f6;display:inline-block"></span>
+                                        <span style="width:9px;height:9px;border-radius:50%;background:#3b82f6;display:inline-block"></span>
+                                        <span style="width:9px;height:9px;border-radius:50%;background:#3b82f6;display:inline-block"></span>
+                                        <span style="width:9px;height:9px;border-radius:50%;background:#3b82f6;display:inline-block"></span>
+                                        <span style="font-size:10px;color:#94a3b8;margin-left:4px">5/5</span>
                                     </div>
                                 </div>
                             </div>
@@ -1387,7 +1439,7 @@
                     <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:shadow-md transition-all">
                         <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-4 text-xl"><i class="fa-solid fa-crosshairs"></i></div>
                         <h4 class="font-bold text-slate-800 mb-2">1. Ciblage & Thème</h4>
-                        <p class="text-sm text-slate-600 leading-relaxed">Je me concentre sur les <strong>vulnérabilités réseaux</strong> (LAN/WLAN), les failles matérielles (Fortinet, Cisco) et les nouvelles technologies comme le WiFi 7. Je m'informe aussi beaucoup via YouTube — chaînes comme <strong>Micode</strong>, <strong>Underscore_</strong> ou <strong>Hafnium</strong>.</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Je me concentre sur la <strong>sécurité des réseaux et des systèmes</strong>, les nouvelles architectures (Zero Trust, SASE), l'évolution des outils de protection (IA, EDR) et les alertes sur les équipements que j'utilise (Fortinet, Microsoft). Je m'informe aussi via YouTube — chaînes comme <strong>Micode</strong>, <strong>Underscore_</strong> ou <strong>Hafnium</strong>.</p>
                     </div>
                     <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:shadow-md transition-all">
                         <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center mb-4 text-xl"><i class="fa-solid fa-filter"></i></div>
@@ -1497,59 +1549,59 @@
                             </div>
                         </div>
 
-                        <!-- 4 — Juil. 2025 — SharePoint zero-day -->
+                        <!-- 4 — Mar. 2025 — Zero Trust -->
                         <div class="article-card shrink-0 w-[320px] bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col">
-                            <div class="bg-gradient-to-r from-blue-700 to-indigo-600 p-4 rounded-t-2xl">
+                            <div class="bg-gradient-to-r from-violet-700 to-purple-600 p-4 rounded-t-2xl">
                                 <div class="flex justify-between items-start mb-2">
-                                    <span class="bg-white/20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">CERT-FR</span>
-                                    <span class="text-white/70 text-[10px] font-mono">Juil. 2025</span>
+                                    <span class="bg-white/20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Cloudflare</span>
+                                    <span class="text-white/70 text-[10px] font-mono">Mar. 2025</span>
                                 </div>
-                                <span class="bg-blue-900/50 text-blue-100 text-[10px] font-bold px-2 py-0.5 rounded-full">Microsoft · Zero-Day RCE</span>
+                                <span class="bg-violet-900/50 text-violet-100 text-[10px] font-bold px-2 py-0.5 rounded-full">Zero Trust · Architecture</span>
                             </div>
                             <div class="p-5 flex flex-col flex-1">
-                                <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2">CVE-2025-53770 — Zero-day SharePoint exploité activement (RCE)</h4>
-                                <p class="text-xs text-slate-500 leading-relaxed flex-1">Désérialisation de données non fiables permettant l'exécution de code distant sur SharePoint Server, sans authentification préalable. Exploité in the wild. Certains clients Exantis utilisent SharePoint On-Premise — mise à jour vérifiée et appliquée en priorité.</p>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2">Zero Trust — Le nouveau modèle de sécurité qui remplace le VPN traditionnel</h4>
+                                <p class="text-xs text-slate-500 leading-relaxed flex-1">Fini le principe "dans le réseau = de confiance". Le Zero Trust impose de vérifier chaque accès, chaque utilisateur, chaque appareil — en permanence. MFA, micro-segmentation, accès au strict minimum nécessaire. Porté par Google (BeyondCorp), Microsoft (Azure AD Conditional Access) et désormais recommandé par l'ANSSI, ce modèle s'impose comme la référence pour sécuriser les environnements hybrides et cloud.</p>
                                 <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-100">
-                                    <span class="bg-blue-50 text-blue-700 text-[10px] font-bold px-2 py-1 rounded-lg border border-blue-100">Microsoft / RCE</span>
-                                    <a href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2025-ALE-010/" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1">Lire <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                                    <span class="bg-violet-50 text-violet-700 text-[10px] font-bold px-2 py-1 rounded-lg border border-violet-100">Réseau / Sécurité</span>
+                                    <a href="https://www.cloudflare.com/fr-fr/learning/security/glossary/what-is-zero-trust/" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1">Lire <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 5 — Oct. 2025 — Veeam RCE -->
+                        <!-- 5 — Sep. 2025 — IA & Cybersécurité -->
                         <div class="article-card shrink-0 w-[320px] bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col">
-                            <div class="bg-gradient-to-r from-yellow-600 to-orange-500 p-4 rounded-t-2xl">
+                            <div class="bg-gradient-to-r from-sky-600 to-blue-500 p-4 rounded-t-2xl">
                                 <div class="flex justify-between items-start mb-2">
-                                    <span class="bg-white/20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">CERT-FR</span>
-                                    <span class="text-white/70 text-[10px] font-mono">Oct. 2025</span>
+                                    <span class="bg-white/20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Microsoft</span>
+                                    <span class="text-white/70 text-[10px] font-mono">Sep. 2025</span>
                                 </div>
-                                <span class="bg-yellow-800/50 text-yellow-100 text-[10px] font-bold px-2 py-0.5 rounded-full">Veeam · RCE critique</span>
+                                <span class="bg-sky-900/50 text-sky-100 text-[10px] font-bold px-2 py-0.5 rounded-full">IA · Cybersécurité</span>
                             </div>
                             <div class="p-5 flex flex-col flex-1">
-                                <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2">CVE-2025-48982 — Multiples failles critiques Veeam Backup (RCE + élévation de privilèges)</h4>
-                                <p class="text-xs text-slate-500 leading-relaxed flex-1">Exécution de code à distance et élévation de privilèges sur Veeam Backup &amp; Replication et Veeam Agent for Microsoft. Très présent chez les clients MSP pour les sauvegardes. J'ai vérifié et mis à jour les versions concernées chez Exantis.</p>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2">L'IA au service de la cybersécurité — Détection, réponse et anticipation des menaces</h4>
+                                <p class="text-xs text-slate-500 leading-relaxed flex-1">Les outils de sécurité intègrent désormais l'IA pour analyser des millions d'événements réseau en temps réel : détection d'anomalies comportementales, corrélation d'alertes, réponse automatisée aux incidents (SOAR). Des solutions comme Microsoft Copilot for Security, Darktrace ou CrowdStrike Falcon utilisent le machine learning pour anticiper les attaques avant même qu'elles frappent — un changement majeur dans la façon de défendre un SI.</p>
                                 <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-100">
-                                    <span class="bg-yellow-50 text-yellow-700 text-[10px] font-bold px-2 py-1 rounded-lg border border-yellow-100">Sauvegarde / RCE</span>
-                                    <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-0869/" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1">Lire <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                                    <span class="bg-sky-50 text-sky-700 text-[10px] font-bold px-2 py-1 rounded-lg border border-sky-100">IA / Détection</span>
+                                    <a href="https://www.microsoft.com/fr-fr/security/business/ai-machine-learning/microsoft-copilot-security" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1">Lire <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 6 — Jan. 2026 — Kerberos CVE-2025-60704 -->
+                        <!-- 6 — Jan. 2026 — Passkeys / FIDO2 -->
                         <div class="article-card shrink-0 w-[320px] bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col">
                             <div class="bg-gradient-to-r from-teal-600 to-cyan-500 p-4 rounded-t-2xl">
                                 <div class="flex justify-between items-start mb-2">
-                                    <span class="bg-white/20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">IT-Connect</span>
+                                    <span class="bg-white/20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">FIDO Alliance</span>
                                     <span class="text-white/70 text-[10px] font-mono">Jan. 2026</span>
                                 </div>
-                                <span class="bg-teal-800/50 text-teal-100 text-[10px] font-bold px-2 py-0.5 rounded-full">Active Directory · Kerberos</span>
+                                <span class="bg-teal-800/50 text-teal-100 text-[10px] font-bold px-2 py-0.5 rounded-full">Passkeys · Authentification</span>
                             </div>
                             <div class="p-5 flex flex-col flex-1">
-                                <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2">CVE-2025-60704 — Faille Kerberos permettant la prise de contrôle d'un domaine AD</h4>
-                                <p class="text-xs text-slate-500 leading-relaxed flex-1">Une faille dans la délégation Kerberos (CVSS 7.5) permet d'usurper l'identité de n'importe quel utilisateur et potentiellement prendre le contrôle total du domaine via une attaque man-in-the-middle. J'administre des contrôleurs de domaine chez Exantis — correctif appliqué en priorité.</p>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2">Passkeys — La fin des mots de passe est en marche</h4>
+                                <p class="text-xs text-slate-500 leading-relaxed flex-1">Les passkeys (FIDO2) remplacent le mot de passe par une clé cryptographique stockée sur l'appareil. Résultat : plus de phishing possible, plus de brute-force, plus de mots de passe réutilisés. Déjà supportés par Windows Hello, Google, Apple et intégrés dans Microsoft Entra ID — c'est un changement de fond dans la façon dont on gère les identités sur un réseau d'entreprise.</p>
                                 <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-100">
-                                    <span class="bg-teal-50 text-teal-700 text-[10px] font-bold px-2 py-1 rounded-lg border border-teal-100">AD / Kerberos</span>
-                                    <a href="https://www.it-connect.fr/active-directory-kerberos-impacte-par-la-cve-2025-60704-quels-sont-les-risques/" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1">Lire <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                                    <span class="bg-teal-50 text-teal-700 text-[10px] font-bold px-2 py-1 rounded-lg border border-teal-100">Identité / FIDO2</span>
+                                    <a href="https://fidoalliance.org/passkeys/" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1">Lire <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1708,16 +1760,29 @@
                 <div><div class="font-bold text-sm text-white/70 uppercase tracking-wider">${d.type}</div><div class="font-black text-xl leading-tight">${p.title}</div></div>
             </div><p class="text-white/80 text-xs leading-relaxed">${d.context || d.desc || ''}</p>`;
 
+            // --- Autonomy helper ---
+            function renderAutonomy(level) {
+                const full = Math.floor(level), half = level % 1 >= 0.5 ? 1 : 0, empty = 5 - full - half;
+                const D = (t) => t==='full'
+                    ? '<span style="width:9px;height:9px;border-radius:50%;background:#3b82f6;display:inline-block"></span>'
+                    : t==='half'
+                    ? '<span style="width:9px;height:9px;border-radius:50%;background:linear-gradient(90deg,#3b82f6 50%,#bfdbfe 50%);display:inline-block"></span>'
+                    : '<span style="width:9px;height:9px;border-radius:50%;background:#bfdbfe;border:1px solid #93c5fd;display:inline-block"></span>';
+                const dots = Array(full).fill(D('full')).concat(Array(half).fill(D('half'))).concat(Array(empty).fill(D('empty'))).join('');
+                return `<div class="p-3 flex items-center justify-between border-t border-slate-100"><span class="font-bold text-slate-500 text-xs">Autonomie</span><div class="flex items-center gap-1">${dots}<span style="font-size:10px;color:#94a3b8;margin-left:4px">${level}/5</span></div></div>`;
+            }
+
             // --- Fiche technique ---
+            const autoRow = d.autonomy !== undefined ? renderAutonomy(d.autonomy) : '';
             if (d.fiche && d.fiche.length) {
-                document.getElementById('pmd-fiche-body').innerHTML = d.fiche.map(f=>`<div class="p-3 flex justify-between gap-2"><span class="font-bold text-slate-500 text-xs shrink-0">${f.label}</span><span class="font-medium text-slate-800 text-xs text-right">${f.value}</span></div>`).join('');
+                document.getElementById('pmd-fiche-body').innerHTML = d.fiche.map(f=>`<div class="p-3 flex justify-between gap-2"><span class="font-bold text-slate-500 text-xs shrink-0">${f.label}</span><span class="font-medium text-slate-800 text-xs text-right">${f.value}</span></div>`).join('') + autoRow;
             } else {
                 document.getElementById('pmd-fiche-body').innerHTML = `
                 <div class="p-3 flex justify-between"><span class="font-bold text-slate-500 text-xs">Catégorie</span><span class="font-medium text-slate-800 text-xs">${p.cat}</span></div>
                 <div class="p-3 flex justify-between"><span class="font-bold text-slate-500 text-xs">Période</span><span class="font-medium text-slate-800 text-xs">${p.period}</span></div>
                 ${d.client ? `<div class="p-3 flex justify-between"><span class="font-bold text-slate-500 text-xs">Client</span><span class="font-medium text-slate-800 text-xs">${d.client}</span></div>` : ''}
                 <div class="p-3"><span class="font-bold text-slate-500 text-xs block mb-2">Stack technique</span>
-                <div class="flex flex-wrap gap-1.5">${(p.skills||[]).map(s=>`<span class="text-[10px] font-bold bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100">${s}</span>`).join('')}</div></div>`;
+                <div class="flex flex-wrap gap-1.5">${(p.skills||[]).map(s=>`<span class="text-[10px] font-bold bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100">${s}</span>`).join('')}</div></div>` + autoRow;
             }
 
             // --- BTS skills ---
@@ -1834,6 +1899,7 @@
                             { num: 4, bgColor: "bg-slate-600", title: "Configuration de la gestion des tickets",
                               html: "Paramétrage des <strong>types de profils</strong> : utilisateur standard (peut ouvrir un ticket), technicien (traite les tickets), administrateur (gère tout). Création des <strong>catégories de tickets</strong> : Réseau, Matériel, Logiciel, Sécurité, Accès. Définition des <strong>délais de traitement</strong> selon l'urgence : incident bloquant résolu en 1h, problème important en 4h, demande normale en 8h. Activation des <strong>notifications automatiques</strong> par email à chaque changement d'état d'un ticket." }
                         ],
+                        autonomy: 5,
                         stats: [{ val: "4 étapes", lbl: "Installation complète" }, { val: "AD connecté", lbl: "Comptes centralisés" }, { val: "3 niveaux", lbl: "Priorités de tickets" }],
                         conclusion: "Ce projet m'a permis de comprendre de l'intérieur comment fonctionne un outil de helpdesk. Tout ce que j'ai configuré ici — tickets, délais, inventaire — je le retrouve dans FreshService et Atera, les outils que j'utilise chaque jour chez Exantis. Avoir monté GLPI moi-même m'aide à mieux comprendre et utiliser ces outils professionnels."
                     }
@@ -1872,6 +1938,7 @@
                             { num: 4, bgColor: "bg-slate-600", title: "Déploiement de règles automatiques sur les postes",
                               html: "Création de <strong>stratégies de groupe</strong> (appelées GPO) : ce sont des règles qui s'appliquent automatiquement sur les postes au démarrage ou à l'ouverture de session, sans intervention manuelle. Règles mises en place : <strong>fond d'écran imposé</strong> sur tous les postes, <strong>accès au panneau de configuration désactivé</strong> pour les utilisateurs standards, <strong>lecteurs réseau connectés automatiquement</strong> selon le groupe de l'utilisateur (les professeurs ont accès à leurs dossiers, les élèves aux leurs). Test de l'application des règles sur les postes clients pour vérifier que tout fonctionne." }
                         ],
+                        autonomy: 5,
                         stats: [{ val: "10+ postes", lbl: "Connectés au domaine" }, { val: "4 groupes", lbl: "Utilisateurs organisés" }, { val: "5 règles", lbl: "Appliquées automatiquement" }],
                         conclusion: "Ce projet est le fondement de tout le reste : tous les clients d'Exantis ont un Active Directory. Dès mes premières semaines en alternance, j'ai pu créer des comptes, modifier des droits et corriger des problèmes de connexion parce que j'avais déjà pratiqué tout ça en formation. La théorie apprise en cours est devenue une compétence opérationnelle immédiatement."
                     }
@@ -1906,6 +1973,7 @@
                             { num: 4, bgColor: "bg-slate-600", title: "Partage de fichiers entre la machine réelle et les VMs",
                               html: "Configuration du <strong>partage de dossiers</strong> entre ma machine physique et les machines virtuelles : les fichiers déposés dans un dossier partagé sur ma machine sont automatiquement accessibles depuis la machine virtuelle. Très utile pour transférer des fichiers ISO, des scripts ou des configurations. Activation du <strong>copier-coller</strong> entre les deux environnements pour travailler plus efficacement. Installation des outils d'intégration dans chaque machine virtuelle pour bénéficier de toutes ces fonctionnalités." }
                         ],
+                        autonomy: 5,
                         stats: [{ val: "3 machines", lbl: "Win10, Server, Linux" }, { val: "3 modes réseau", lbl: "Selon les besoins" }, { val: "Snapshots", lbl: "Retour arrière en 1 clic" }],
                         conclusion: "VirtualBox a été la base de toute ma formation pratique en BTS SIO. Sans cet environnement, impossible de tester des configurations réseau, d'installer des serveurs ou de reproduire une infrastructure d'entreprise chez soi. Cette compétence est aussi utilisée en entreprise : chez Exantis, les environnements de test et de démo reposent sur les mêmes principes de virtualisation."
                     }
@@ -1961,6 +2029,7 @@ www   →  dario-demange.github.io
                                 text: "Une fois la redirection DNS en place, activation du <strong>HTTPS</strong> depuis les paramètres GitHub Pages. Le HTTPS, c'est le protocole qui chiffre les échanges entre le visiteur et le site — symbolisé par le cadenas dans la barre du navigateur. GitHub génère et renouvelle automatiquement le certificat de sécurité nécessaire, sans aucune intervention de ma part. Le site est désormais accessible en toute sécurité sur mon nom de domaine personnel."
                             }
                         ],
+                        autonomy: 5,
                         stats: [
                             { val: "GitHub Pages", lbl: "Hébergement automatique" },
                             { val: "Domaine WLS", lbl: "Adresse personnalisée" },
@@ -2027,6 +2096,7 @@ www   →  dario-demange.github.io
                                 text: "En dehors des préparations de postes neufs, j'interviens également sur des machines en panne : <strong>diagnostic logiciel</strong> (système corrompu, virus, profil Windows cassé) ou <strong>matériel</strong> (disque défaillant, RAM instable). Sur les remplacements de poste, je réalise le <strong>transfert de données</strong> de l'ancien vers le nouveau : récupération des documents, profil de messagerie, favoris, paramètres. L'objectif est que l'utilisateur retrouve son environnement de travail exactement comme avant."
                             }
                         ],
+                        autonomy: 4.5,
                         stats: [
                             { val: "100+", lbl: "Postes préparés" },
                             { val: "Multi-clients", lbl: "Écoles, PME, associations" },
@@ -2084,6 +2154,7 @@ www   →  dario-demange.github.io
                                 images: ["Atera/Client.png"]
                             }
                         ],
+                        autonomy: 4.5,
                         stats: [
                             { val: "100+", lbl: "Tickets traités" },
                             { val: "Multi-clients", lbl: "Périmètre support" },
@@ -2141,6 +2212,7 @@ www   →  dario-demange.github.io
                                 images: ["AD/arborescence%20des%20groupes.png"]
                             }
                         ],
+                        autonomy: 4,
                         stats: [
                             { val: "Multi-tenants", lbl: "Clients M365" },
                             { val: "Hybride", lbl: "AD + Azure AD" },
@@ -2206,6 +2278,7 @@ Write-Host "RAM libre : $ramFree Go"`,
                                 text: "À l'issue du déploiement : <strong>100% des machines clientes</strong> équipées de l'agent Atera et de SentinelOne. Les alertes automatiques (disque critique, agent déconnecté, menace détectée) remontent en temps réel. Le taux de patching Windows est suivi et des campagnes de mise à jour planifiées permettent de maintenir le parc à jour."
                             }
                         ],
+                        autonomy: 4,
                         stats: [
                             { val: "330+", lbl: "Endpoints supervisés" },
                             { val: "8 sites", lbl: "Clients couverts" },
@@ -2217,7 +2290,7 @@ Write-Host "RAM libre : $ramFree Go"`,
                 // ── EXANTIS — 2ÈME ANNÉE ─────────────────────────────────
                 {
                     id: 110,
-                    title: "Migration TSE → Microsoft 365 (Hudault)",
+                    title: "Migration TSE → Microsoft 365",
                     cat: "Exantis", type: "Exantis",
                     period: "01/08/2025 – 20/08/2025",
                     icon: "fa-solid fa-arrow-right-arrow-left text-sky-500",
@@ -2255,6 +2328,7 @@ Write-Host "RAM libre : $ramFree Go"`,
                             {
                                 title: "Étape 3 — Attribution des licences M365 & configuration des postes",
                                 text: "Attribution des licences <strong>Microsoft 365 Business Standard</strong> à chaque utilisateur depuis le portail d'administration M365. Installation et configuration sur chaque poste individuel : <strong>Outlook</strong> (messagerie), <strong>Teams</strong> (communication), <strong>OneDrive</strong> (synchronisation des fichiers). Vérification que chacun retrouve bien ses données, ses contacts et ses calendriers.",
+                                images: ["tsetableau.png"],
                                 code: `# Déploiement silencieux OneDrive via PowerShell
 $tenantId = "xxxxx-xxxx-xxxx-xxxx"
 $oneDriveSetup = "C:\\Program Files\\Microsoft OneDrive\\OneDrive.exe"
@@ -2265,6 +2339,7 @@ $oneDriveSetup = "C:\\Program Files\\Microsoft OneDrive\\OneDrive.exe"
                                 text: "Accompagnement des 12 utilisateurs : démonstration d'Outlook, Teams et OneDrive, réponse aux questions. Période de test de 2 semaines où le serveur RDS reste accessible en parallèle (filet de sécurité). Une fois la migration validée par le client et tous les accès confirmés, le <strong>serveur RDS est éteint définitivement</strong> et les licences Windows Server libérées."
                             }
                         ],
+                        autonomy: 3.5,
                         stats: [
                             { val: "12 users", lbl: "Migrés vers M365" },
                             { val: "TSE → Cloud", lbl: "Infrastructure" },
@@ -2307,6 +2382,7 @@ $oneDriveSetup = "C:\\Program Files\\Microsoft OneDrive\\OneDrive.exe"
                             { num: 4, bgColor: "bg-amber-600", title: "Classes mobiles & Aide utilisateurs",
                               html: "Les établissements utilisent des <strong>classes mobiles</strong> (chariots de tablettes ou d'ordinateurs portables). Je gère leur maintenance : mise à jour des systèmes, réintégration au domaine AD quand un poste est sorti du réseau, remplacement de batteries ou écrans. L'assistance aux utilisateurs (enseignants, CPE, vie scolaire) est aussi une part importante : problèmes de connexion, logiciels bloqués, imprimantes réseau." }
                         ],
+                        autonomy: 4,
                         stats: [{ val: "Hebdo", lbl: "Présence sur site" }, { val: "AD + Serveurs", lbl: "Cœur des missions" }, { val: "Multi-sites", lbl: "Établissements" }],
                         conclusion: "La régie scolaire est une mission très formatrice : on intervient seul, sur des problèmes variés, avec des utilisateurs non-techniques. Elle m'a appris à prioriser rapidement, à communiquer clairement avec les enseignants et à maintenir une infrastructure souvent contrainte en budget."
                     }
