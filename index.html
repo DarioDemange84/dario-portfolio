@@ -96,8 +96,7 @@
                                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Dario Demange</span>
                             </h1>
                             <p class="text-lg lg:text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                                Technicien informatique en alternance chez <span class="font-bold text-slate-800">Exantis Informatique</span>.
-                                Déploiement d'infrastructures réseaux, résolution d'incidents N1/N2 et sécurisation des systèmes.
+                                Apprenti technicien informatique en <span class="font-bold text-slate-800">BTS SIO Option SISR</span> à la CCI du Vaucluse, en alternance chez <span class="font-bold text-slate-800">Exantis Informatique</span>.
                             </p>
                             <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                                 <button onclick="switchTab('projets')" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-blue-500/30 flex items-center justify-center gap-2">
@@ -158,6 +157,13 @@
                     <i class="fa-solid fa-terminal text-blue-500"></i> Mes Compétences Techniques
                 </h3>
                 <p class="text-sm text-slate-500 mb-8">Acquises en formation BTS SIO SISR et en alternance chez Exantis Informatique</p>
+                <style>
+                    .skill-slide { transition: opacity 0.25s ease, transform 0.25s ease; }
+                    .skill-slide.hidden-slide { opacity: 0; transform: translateX(8px); position: absolute; pointer-events: none; }
+                    .skill-slide.visible-slide { opacity: 1; transform: translateX(0); position: relative; }
+                    .carr-btn { cursor: pointer; background: none; border: none; padding: 4px 8px; border-radius: 8px; transition: background 0.15s; }
+                    .carr-btn:hover { background: rgba(0,0,0,0.06); }
+                </style>
                 <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
 
                     <!-- Réseau & Sécurité -->
@@ -169,16 +175,24 @@
                             <h4 class="font-bold text-white text-base leading-tight">Réseau & Sécurité</h4>
                             <p class="text-blue-100 text-[11px] mt-1">Switching, firewalling, segmentation</p>
                         </div>
-                        <div class="bg-white p-4">
-                            <div class="flex flex-wrap gap-1.5">
-                                <span class="bg-blue-50 text-blue-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-blue-100">VLANs</span>
-                                <span class="bg-blue-50 text-blue-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-blue-100">Trunking</span>
-                                <span class="bg-blue-50 text-blue-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-blue-100">Fortinet</span>
-                                <span class="bg-blue-50 text-blue-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-blue-100">Aruba / HPE</span>
-                                <span class="bg-blue-50 text-blue-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-blue-100">pfSense</span>
-                                <span class="bg-blue-50 text-blue-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-blue-100">PoE+</span>
-                                <span class="bg-blue-50 text-blue-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-blue-100">Cisco (Packet Tracer)</span>
-                                <span class="bg-blue-50 text-blue-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-blue-100">Switch & Routeur Cisco</span>
+                        <div class="bg-white p-5 min-h-[110px] flex flex-col items-center justify-between" data-carousel="reseau" data-active="bg-blue-500">
+                            <div class="relative w-full text-center min-h-[52px] flex items-center justify-center">
+                                <span class="skill-slide visible-slide text-blue-700 font-bold text-lg">Fortinet FortiGate</span>
+                                <span class="skill-slide hidden-slide text-blue-700 font-bold text-lg">VLANs</span>
+                                <span class="skill-slide hidden-slide text-blue-700 font-bold text-lg">Aruba / HPE</span>
+                                <span class="skill-slide hidden-slide text-blue-700 font-bold text-lg">pfSense & OPNsense</span>
+                                <span class="skill-slide hidden-slide text-blue-700 font-bold text-lg">SentinelOne</span>
+                            </div>
+                            <div class="flex items-center gap-3 mt-3">
+                                <button class="carr-btn carr-prev text-blue-400 text-sm"><i class="fa-solid fa-chevron-left"></i></button>
+                                <div class="flex gap-1.5" data-dots="reseau">
+                                    <span class="w-2 h-2 rounded-full bg-blue-500 transition-all"></span>
+                                    <span class="w-2 h-2 rounded-full bg-slate-200 transition-all"></span>
+                                    <span class="w-2 h-2 rounded-full bg-slate-200 transition-all"></span>
+                                    <span class="w-2 h-2 rounded-full bg-slate-200 transition-all"></span>
+                                    <span class="w-2 h-2 rounded-full bg-slate-200 transition-all"></span>
+                                </div>
+                                <button class="carr-btn carr-next text-blue-400 text-sm"><i class="fa-solid fa-chevron-right"></i></button>
                             </div>
                         </div>
                     </div>
@@ -192,16 +206,24 @@
                             <h4 class="font-bold text-white text-base leading-tight">Administration Système</h4>
                             <p class="text-indigo-100 text-[11px] mt-1">Windows Server, AD, virtualisation</p>
                         </div>
-                        <div class="bg-white p-4">
-                            <div class="flex flex-wrap gap-1.5">
-                                <span class="bg-indigo-50 text-indigo-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-indigo-100">Windows Server 2022</span>
-                                <span class="bg-indigo-50 text-indigo-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-indigo-100">Active Directory</span>
-                                <span class="bg-indigo-50 text-indigo-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-indigo-100">GPO / OU</span>
-                                <span class="bg-indigo-50 text-indigo-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-indigo-100">DNS / DHCP</span>
-                                <span class="bg-indigo-50 text-indigo-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-indigo-100">Linux Ubuntu</span>
-                                <span class="bg-indigo-50 text-indigo-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-indigo-100">VirtualBox</span>
-                                <span class="bg-indigo-50 text-indigo-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-indigo-100">Hyper-V</span>
-                                <span class="bg-indigo-50 text-indigo-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-indigo-100">Config. copieurs / scanners</span>
+                        <div class="bg-white p-5 min-h-[110px] flex flex-col items-center justify-between" data-carousel="systeme" data-active="bg-indigo-500">
+                            <div class="relative w-full text-center min-h-[52px] flex items-center justify-center">
+                                <span class="skill-slide visible-slide text-indigo-700 font-bold text-lg">Active Directory</span>
+                                <span class="skill-slide hidden-slide text-indigo-700 font-bold text-lg">Windows Server 2022</span>
+                                <span class="skill-slide hidden-slide text-indigo-700 font-bold text-lg">GPO & Stratégies de groupe</span>
+                                <span class="skill-slide hidden-slide text-indigo-700 font-bold text-lg">Linux Ubuntu</span>
+                                <span class="skill-slide hidden-slide text-indigo-700 font-bold text-lg">Proxmox VE</span>
+                            </div>
+                            <div class="flex items-center gap-3 mt-3">
+                                <button class="carr-btn carr-prev text-indigo-400 text-sm"><i class="fa-solid fa-chevron-left"></i></button>
+                                <div class="flex gap-1.5" data-dots="systeme">
+                                    <span class="w-2 h-2 rounded-full bg-indigo-500 transition-all"></span>
+                                    <span class="w-2 h-2 rounded-full bg-slate-200 transition-all"></span>
+                                    <span class="w-2 h-2 rounded-full bg-slate-200 transition-all"></span>
+                                    <span class="w-2 h-2 rounded-full bg-slate-200 transition-all"></span>
+                                    <span class="w-2 h-2 rounded-full bg-slate-200 transition-all"></span>
+                                </div>
+                                <button class="carr-btn carr-next text-indigo-400 text-sm"><i class="fa-solid fa-chevron-right"></i></button>
                             </div>
                         </div>
                     </div>
@@ -215,15 +237,24 @@
                             <h4 class="font-bold text-white text-base leading-tight">Cloud & Microsoft 365</h4>
                             <p class="text-sky-100 text-[11px] mt-1">M365, Azure AD, Exchange Online</p>
                         </div>
-                        <div class="bg-white p-4">
-                            <div class="flex flex-wrap gap-1.5">
-                                <span class="bg-sky-50 text-sky-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-sky-100">Microsoft 365</span>
-                                <span class="bg-sky-50 text-sky-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-sky-100">Azure AD Connect</span>
-                                <span class="bg-sky-50 text-sky-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-sky-100">Exchange Online</span>
-                                <span class="bg-sky-50 text-sky-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-sky-100">SharePoint</span>
-                                <span class="bg-sky-50 text-sky-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-sky-100">OneDrive</span>
-                                <span class="bg-sky-50 text-sky-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-sky-100">Teams</span>
-                                <span class="bg-sky-50 text-sky-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-sky-100">Migration RDS→M365</span>
+                        <div class="bg-white p-5 min-h-[110px] flex flex-col items-center justify-between" data-carousel="cloud" data-active="bg-sky-500">
+                            <div class="relative w-full text-center min-h-[52px] flex items-center justify-center">
+                                <span class="skill-slide visible-slide text-sky-700 font-bold text-lg">Microsoft 365</span>
+                                <span class="skill-slide hidden-slide text-sky-700 font-bold text-lg">Exchange Online</span>
+                                <span class="skill-slide hidden-slide text-sky-700 font-bold text-lg">Entra ID</span>
+                                <span class="skill-slide hidden-slide text-sky-700 font-bold text-lg">SharePoint</span>
+                                <span class="skill-slide hidden-slide text-sky-700 font-bold text-lg">Migration TSE → M365</span>
+                            </div>
+                            <div class="flex items-center gap-3 mt-3">
+                                <button class="carr-btn carr-prev text-sky-400 text-sm"><i class="fa-solid fa-chevron-left"></i></button>
+                                <div class="flex gap-1.5" data-dots="cloud">
+                                    <span class="w-2 h-2 rounded-full bg-sky-500 transition-all"></span>
+                                    <span class="w-2 h-2 rounded-full bg-slate-200 transition-all"></span>
+                                    <span class="w-2 h-2 rounded-full bg-slate-200 transition-all"></span>
+                                    <span class="w-2 h-2 rounded-full bg-slate-200 transition-all"></span>
+                                    <span class="w-2 h-2 rounded-full bg-slate-200 transition-all"></span>
+                                </div>
+                                <button class="carr-btn carr-next text-sky-400 text-sm"><i class="fa-solid fa-chevron-right"></i></button>
                             </div>
                         </div>
                     </div>
@@ -237,21 +268,57 @@
                             <h4 class="font-bold text-white text-base leading-tight">Support & Outils ITSM</h4>
                             <p class="text-emerald-100 text-[11px] mt-1">Ticketing, RMM, EDR, déploiement</p>
                         </div>
-                        <div class="bg-white p-4">
-                            <div class="flex flex-wrap gap-1.5">
-                                <span class="bg-emerald-50 text-emerald-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-emerald-100">FreshService (ITSM)</span>
-                                <span class="bg-emerald-50 text-emerald-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-emerald-100">Atera (RMM)</span>
-                                <span class="bg-emerald-50 text-emerald-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-emerald-100">SentinelOne (EDR)</span>
-                                <span class="bg-emerald-50 text-emerald-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-emerald-100">GLPI</span>
-                                <span class="bg-emerald-50 text-emerald-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-emerald-100">PowerShell</span>
-                                <span class="bg-emerald-50 text-emerald-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-emerald-100">Déploiement postes</span>
-                                <span class="bg-emerald-50 text-emerald-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-emerald-100">Diagnostic logiciel & matériel</span>
-                                <span class="bg-emerald-50 text-emerald-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-emerald-100">RDM</span>
+                        <div class="bg-white p-5 min-h-[110px] flex flex-col items-center justify-between" data-carousel="itsm" data-active="bg-emerald-500">
+                            <div class="relative w-full text-center min-h-[52px] flex items-center justify-center">
+                                <span class="skill-slide visible-slide text-emerald-700 font-bold text-lg">Atera — Outil de monitoring</span>
+                                <span class="skill-slide hidden-slide text-emerald-700 font-bold text-lg">FreshService — Gestion de tickets</span>
+                                <span class="skill-slide hidden-slide text-emerald-700 font-bold text-lg">GLPI</span>
+                                <span class="skill-slide hidden-slide text-emerald-700 font-bold text-lg">PowerShell</span>
+                                <span class="skill-slide hidden-slide text-emerald-700 font-bold text-lg">RDM — Gestionnaire de connexions</span>
+                            </div>
+                            <div class="flex items-center gap-3 mt-3">
+                                <button class="carr-btn carr-prev text-emerald-400 text-sm"><i class="fa-solid fa-chevron-left"></i></button>
+                                <div class="flex gap-1.5" data-dots="itsm">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-500 transition-all"></span>
+                                    <span class="w-2 h-2 rounded-full bg-slate-200 transition-all"></span>
+                                    <span class="w-2 h-2 rounded-full bg-slate-200 transition-all"></span>
+                                    <span class="w-2 h-2 rounded-full bg-slate-200 transition-all"></span>
+                                    <span class="w-2 h-2 rounded-full bg-slate-200 transition-all"></span>
+                                </div>
+                                <button class="carr-btn carr-next text-emerald-400 text-sm"><i class="fa-solid fa-chevron-right"></i></button>
                             </div>
                         </div>
                     </div>
 
                 </div>
+                <script>
+                (function() {
+                    document.querySelectorAll('[data-carousel]').forEach(function(container) {
+                        const id          = container.dataset.carousel;
+                        const activeColor = container.dataset.active;
+                        const dotsEl      = document.querySelector('[data-dots="' + id + '"]');
+                        const slides      = container.querySelectorAll('.skill-slide');
+                        const dots        = dotsEl ? dotsEl.querySelectorAll('span') : [];
+                        const total       = slides.length;
+                        let current       = 0;
+
+                        function go(next) {
+                            slides[current].classList.remove('visible-slide');
+                            slides[current].classList.add('hidden-slide');
+                            if (dots[current]) { dots[current].classList.remove(activeColor); dots[current].classList.add('bg-slate-200'); }
+                            current = (next + total) % total;
+                            slides[current].classList.remove('hidden-slide');
+                            slides[current].classList.add('visible-slide');
+                            if (dots[current]) { dots[current].classList.remove('bg-slate-200'); dots[current].classList.add(activeColor); }
+                        }
+
+                        const prevBtn = container.querySelector('.carr-prev');
+                        const nextBtn = container.querySelector('.carr-next');
+                        if (prevBtn) prevBtn.addEventListener('click', function() { go(current - 1); });
+                        if (nextBtn) nextBtn.addEventListener('click', function() { go(current + 1); });
+                    });
+                })();
+                </script>
             </div>
             <!-- BLOC EXANTIS INFORMATIQUE -->
             <div class="mb-20 bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 md:p-10 text-white overflow-hidden relative">
@@ -585,7 +652,7 @@
                                 <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3">
                                     <span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">4</span> Conception : Architecture & Plan d'Adressage
                                 </h2>
-                                <p class="text-slate-700 leading-relaxed text-justify mb-5">L'école étant répartie sur plusieurs bâtiments, j'ai conçu une architecture en étoile : un switch central en baie principale auquel sont reliés les switches de chaque bâtiment. Les câbles entre switches transportent simultanément les 3 réseaux séparés grâce à un mécanisme de marquage (VLAN tagging) — un seul câble suffit pour véhiculer administration, pédagogie et management sans qu'ils se mélangent.</p>
+                                <p class="text-slate-700 leading-relaxed text-justify mb-5">L'école étant répartie sur plusieurs bâtiments, j'ai conçu une architecture en étoile : un switch central en baie principale auquel sont reliés les switches de chaque bâtiment. Les câbles entre switches transportent simultanément les 3 réseaux séparés grâce à un mécanisme de marquage (VLAN tagging) : un seul câble suffit pour véhiculer administration, pédagogie et management sans qu'ils se mélangent.</p>
 
                                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
                                     <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 text-center">
@@ -648,7 +715,7 @@
                                 <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3">
                                     <span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">6</span> Supervision Cloud & Résultats
                                 </h2>
-                                <p class="text-slate-700 leading-relaxed text-justify mb-6">Le portail <strong>HPE Instant On</strong> génère une cartographie dynamique de tous les switches avec l'état de santé de chaque équipement en temps réel. Des alertes sont automatiquement envoyées par email si un switch se déconnecte, avec indication de la cause probable (câble débranché, perte d'alimentation, etc.) — plus besoin de se déplacer sur site pour détecter une panne.</p>
+                                <p class="text-slate-700 leading-relaxed text-justify mb-6">Le portail <strong>HPE Instant On</strong> génère une cartographie dynamique de tous les switches avec l'état de santé de chaque équipement en temps réel. Des alertes sont automatiquement envoyées par email si un switch se déconnecte, avec indication de la cause probable (câble débranché, perte d'alimentation, etc.). Plus besoin de se déplacer sur site pour détecter une panne.</p>
                                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
                                     <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 text-center">
                                         <div class="text-3xl font-black text-emerald-600">6</div>
@@ -678,9 +745,9 @@
                                 </h2>
                                 <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-6">
                                     <h4 class="font-bold text-amber-800 mb-2 flex items-center gap-2"><i class="fa-solid fa-lightbulb"></i> Principale difficulté</h4>
-                                    <p class="text-slate-700 text-sm leading-relaxed">Les baies de brassage étaient situées en hauteur et le câblage existant était dans un état déplorable — câbles non étiquetés, enchevêtrés, sans aucune logique apparente. Démêler, identifier et re-étiqueter chaque lien avant même de pouvoir brancher les nouveaux switches a demandé un travail minutieux, à l'échelle, dans des espaces peu accessibles.</p>
+                                    <p class="text-slate-700 text-sm leading-relaxed">Les baies de brassage étaient situées en hauteur et le câblage existant était dans un état déplorable : câbles non étiquetés, enchevêtrés, sans aucune logique apparente. Démêler, identifier et re-étiqueter chaque lien avant même de pouvoir brancher les nouveaux switches a demandé un travail minutieux, à l'échelle, dans des espaces peu accessibles.</p>
                                 </div>
-                                <p class="text-slate-700 leading-relaxed text-justify">Ce projet a pleinement répondu au cahier des charges : réseau fiable, sécurisé et supervisable à distance depuis n'importe où. Il m'a permis de mettre en pratique sur une infrastructure réelle des compétences fondamentales — segmentation du réseau, gestion centralisée depuis le Cloud, alimentation des équipements par câble — dans un délai contraint de 3 jours avec zéro incident post-déploiement.</p>
+                                <p class="text-slate-700 leading-relaxed text-justify">Ce projet m'a permis de déployer une vraie infrastructure réseau sur site, dans des conditions réelles et avec des contraintes de temps. En 3 jours, on est partis d'un câblage chaotique pour arriver à un réseau propre, segmenté et supervisable à distance. Zéro incident après la mise en service, et le client pouvait tout voir depuis son téléphone.</p>
                             </div>
                         </div>
                     </div>
@@ -757,7 +824,7 @@
                         <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">Configuration de bornes WiFi sur un nouveau site avec leurs switches</h1>
 
                         <p class="text-lg text-slate-700 mb-12 leading-relaxed border-l-4 border-blue-500 pl-6 bg-slate-50 py-4 rounded-r-xl font-medium">
-                            <strong>Situation :</strong> Ouverture d'un nouveau site industriel pour le client LogiSud — un grand entrepôt logistique complètement vierge de toute connectivité. Mission : équiper le bâtiment d'un WiFi professionnel couvrant toutes les zones, avec un réseau séparé pour le personnel et un autre pour les visiteurs, le tout géré depuis le pare-feu déjà installé sur place.
+                            <strong>Situation :</strong> Ouverture d'un nouveau site industriel pour le client LogiSud, un grand entrepôt logistique complètement vierge de toute connectivité. Mission : équiper le bâtiment d'un WiFi professionnel couvrant toutes les zones, avec un réseau séparé pour le personnel et un autre pour les visiteurs, le tout géré depuis le pare-feu déjà installé sur place.
                         </p>
 
                         <div class="space-y-12">
@@ -983,7 +1050,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <p class="text-slate-700 leading-relaxed text-justify">Ce projet valide ma maîtrise des infrastructures WiFi professionnelles Fortinet : planification de la couverture radio, configuration centralisée depuis le pare-feu, et déploiement en conditions industrielles réelles sur plus de 2 000 m². L'architecture est robuste, évolutive — ajouter une borne supplémentaire se fait en quelques minutes — et cohérente avec les équipements Exantis déjà en place chez le client.</p>
+                                <p class="text-slate-700 leading-relaxed text-justify">Ce projet m'a confronté à des contraintes concrètes : un entrepôt de 2 000 m², des murs épais, du matériel industriel partout. Il a fallu anticiper la couverture radio avant d'arriver sur site, puis tout configurer depuis le FortiGate pour que les 8 bornes soient opérationnelles le jour J. Le résultat tient : deux réseaux WiFi distincts, une gestion centralisée, et une architecture qu'on peut faire évoluer facilement si le client agrandit ses locaux.</p>
                             </div>
                         </div>
                     </div>
