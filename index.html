@@ -173,7 +173,6 @@
                                 <i class="fa-solid fa-shield-halved text-white text-lg"></i>
                             </div>
                             <h4 class="font-bold text-white text-base leading-tight">Réseau & Sécurité</h4>
-                            <p class="text-blue-100 text-[11px] mt-1">Switching, firewalling, segmentation</p>
                         </div>
                         <div class="bg-white p-5 min-h-[110px] flex flex-col items-center justify-between" data-carousel="reseau" data-active="bg-blue-500">
                             <div class="relative w-full text-center min-h-[52px] flex items-center justify-center">
@@ -204,7 +203,6 @@
                                 <i class="fa-brands fa-windows text-white text-lg"></i>
                             </div>
                             <h4 class="font-bold text-white text-base leading-tight">Administration Système</h4>
-                            <p class="text-indigo-100 text-[11px] mt-1">Windows Server, AD, virtualisation</p>
                         </div>
                         <div class="bg-white p-5 min-h-[110px] flex flex-col items-center justify-between" data-carousel="systeme" data-active="bg-indigo-500">
                             <div class="relative w-full text-center min-h-[52px] flex items-center justify-center">
@@ -235,7 +233,6 @@
                                 <i class="fa-solid fa-cloud text-white text-lg"></i>
                             </div>
                             <h4 class="font-bold text-white text-base leading-tight">Cloud & Microsoft 365</h4>
-                            <p class="text-sky-100 text-[11px] mt-1">M365, Azure AD, Exchange Online</p>
                         </div>
                         <div class="bg-white p-5 min-h-[110px] flex flex-col items-center justify-between" data-carousel="cloud" data-active="bg-sky-500">
                             <div class="relative w-full text-center min-h-[52px] flex items-center justify-center">
@@ -266,7 +263,6 @@
                                 <i class="fa-solid fa-screwdriver-wrench text-white text-lg"></i>
                             </div>
                             <h4 class="font-bold text-white text-base leading-tight">Support & Outils ITSM</h4>
-                            <p class="text-emerald-100 text-[11px] mt-1">Ticketing, RMM, EDR, déploiement</p>
                         </div>
                         <div class="bg-white p-5 min-h-[110px] flex flex-col items-center justify-between" data-carousel="itsm" data-active="bg-emerald-500">
                             <div class="relative w-full text-center min-h-[52px] flex items-center justify-center">
@@ -444,7 +440,10 @@
                     <!-- PROJET 1 -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 flex flex-col hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer group" onclick="showProjectDetail(1)">
                         <div class="h-56 relative overflow-hidden bg-slate-800">
-                            <img src="montage.png" alt="LAN" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-slate-900"></div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-10">
+                                <i class="fa-solid fa-network-wired text-white text-[120px]"></i>
+                            </div>
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
                             <div class="absolute bottom-4 left-4 right-4 text-white">
                                 <span class="bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider mb-2 inline-block">Projet Majeur · 02/04 – 04/04/2025</span>
@@ -455,7 +454,7 @@
                             <p class="text-sm text-slate-600 mb-4 flex-1">Remplacement de 6 anciens switches non-manageables pour l'école Saint-André. Mise en place d'une architecture avec <strong>3 réseaux isolés</strong> (administration, pédagogie, gestion), gérée à distance depuis un portail Cloud.</p>
                             <div class="flex flex-wrap gap-2 mb-6">
                                 <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">HPE Instant On</span>
-                                <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">VLAN 802.1Q</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">VLANs</span>
                                 <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">Trunking</span>
                                 <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">PoE+</span>
                             </div>
@@ -488,6 +487,7 @@
                             </button>
                         </div>
                     </div>
+
                 </div>
 
                 <!-- TABLEAU DES RÉALISATIONS -->
@@ -520,8 +520,9 @@
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                     <!-- SIDEBAR -->
                     <div class="lg:col-span-4 space-y-6">
-                        <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
-                            <img src="montage.png" alt="Montage en baie" class="w-full h-64 object-cover" />
+                        <div class="rounded-2xl bg-slate-800 h-48 flex flex-col items-center justify-center gap-3 shadow-lg border border-slate-700">
+                            <i class="fa-solid fa-network-wired text-5xl text-slate-500"></i>
+                            <span class="text-slate-400 text-xs font-medium uppercase tracking-wider">Infrastructure réseau</span>
                         </div>
 
                         <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
@@ -546,7 +547,7 @@
                                     <span class="font-bold text-slate-600 block mb-3">Technologies</span>
                                     <div class="flex flex-wrap gap-2 text-xs font-bold text-blue-700">
                                         <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">HPE Instant On 1930</span>
-                                        <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">VLAN 802.1Q</span>
+                                        <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">VLANs</span>
                                         <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">Trunking</span>
                                         <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">PoE+</span>
                                         <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">Cloud Management</span>
@@ -584,7 +585,70 @@
                         </p>
 
                         <div class="space-y-12">
-                            <!-- Section 1 -->
+                            <!-- Section 0 — Organisation & Mode Projet -->
+                            <div class="bg-indigo-50 border border-indigo-200 rounded-2xl p-6">
+                                <h2 class="text-xl font-bold text-indigo-800 mb-1 flex items-center gap-2">
+                                    <i class="fa-solid fa-people-group text-indigo-500"></i> Organisation de l'équipe & Mode Projet
+                                </h2>
+                                <p class="text-sm text-indigo-700 mb-5">Projet réalisé en binôme avec <strong>Anton</strong>. On s'est réparti le travail et on avait un Planner à dispo pour suivre les étapes et tenir le délai d'un mois imposé par le client, tout en évitant d'intervenir pendant les cours.</p>
+                                <div class="overflow-x-auto rounded-xl border border-indigo-200 shadow-sm">
+                                    <table class="w-full text-sm border-collapse">
+                                        <thead>
+                                            <tr class="bg-indigo-700 text-white">
+                                                <th class="text-left p-3 font-bold">Étape</th>
+                                                <th class="text-left p-3 font-bold w-36">Date</th>
+                                                <th class="text-center p-3 font-bold w-32">Responsable</th>
+                                                <th class="text-left p-3 font-bold">Action principale</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-indigo-100">
+                                            <tr class="bg-white hover:bg-indigo-50 transition-colors">
+                                                <td class="p-3 font-bold text-slate-700">Audit & Repérage</td>
+                                                <td class="p-3 text-xs text-slate-500 font-medium">13/03/2025</td>
+                                                <td class="p-3 text-center"><span class="bg-slate-200 text-slate-700 text-xs font-bold px-2 py-1 rounded-full">Anton</span></td>
+                                                <td class="p-3 text-slate-600 text-xs">Inventaire des prises murales, identification des équipements, relevé du câblage existant.</td>
+                                            </tr>
+                                            <tr class="bg-indigo-50 hover:bg-indigo-100 transition-colors">
+                                                <td class="p-3 font-bold text-slate-700">Commande du matériel</td>
+                                                <td class="p-3 text-xs text-slate-500 font-medium">17/03/2025</td>
+                                                <td class="p-3 text-center"><span class="bg-slate-200 text-slate-700 text-xs font-bold px-2 py-1 rounded-full">Anton</span></td>
+                                                <td class="p-3 text-slate-600 text-xs">Commande des 6 switches HPE Instant On 1930 auprès du fournisseur — délai de livraison estimé à 1 semaine.</td>
+                                            </tr>
+                                            <tr class="bg-white hover:bg-indigo-50 transition-colors">
+                                                <td class="p-3 font-bold text-slate-700">Réception & Inventaire</td>
+                                                <td class="p-3 text-xs text-slate-500 font-medium">21/03/2025</td>
+                                                <td class="p-3 text-center"><span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-2 py-1 rounded-full">Moi</span></td>
+                                                <td class="p-3 text-slate-600 text-xs">Réception du matériel et vérification des références.</td>
+                                            </tr>
+                                            <tr class="bg-indigo-50 hover:bg-indigo-100 transition-colors">
+                                                <td class="p-3 font-bold text-slate-700">Préparation & Pré-config</td>
+                                                <td class="p-3 text-xs text-slate-500 font-medium">28 – 31/03/2025</td>
+                                                <td class="p-3 text-center"><span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-2 py-1 rounded-full">Moi</span></td>
+                                                <td class="p-3 text-slate-600 text-xs">Configuration des VLANs et affectation des ports depuis l'atelier Exantis, avant intervention sur site.</td>
+                                            </tr>
+                                            <tr class="bg-white hover:bg-indigo-50 transition-colors">
+                                                <td class="p-3 font-bold text-slate-700">Installation Physique</td>
+                                                <td class="p-3 text-xs text-slate-500 font-medium">02 – 04/04/2025</td>
+                                                <td class="p-3 text-center"><span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-2 py-1 rounded-full">Moi</span></td>
+                                                <td class="p-3 text-slate-600 text-xs">Mise en place, raccordement et remplacement des 6 switches sur site (hors heures de cours).</td>
+                                            </tr>
+                                            <tr class="bg-indigo-50 hover:bg-indigo-100 transition-colors">
+                                                <td class="p-3 font-bold text-slate-700">Configuration Sécurité</td>
+                                                <td class="p-3 text-xs text-slate-500 font-medium">03/04/2025</td>
+                                                <td class="p-3 text-center"><span class="bg-slate-200 text-slate-700 text-xs font-bold px-2 py-1 rounded-full">Anton</span></td>
+                                                <td class="p-3 text-slate-600 text-xs">Mise en place des règles de filtrage entre les VLANs.</td>
+                                            </tr>
+                                            <tr class="bg-white hover:bg-indigo-50 transition-colors">
+                                                <td class="p-3 font-bold text-slate-700">Tests</td>
+                                                <td class="p-3 text-xs text-slate-500 font-medium">04/04/2025</td>
+                                                <td class="p-3 text-center"><span class="bg-violet-100 text-violet-700 text-xs font-bold px-2 py-1 rounded-full">Moi & Anton</span></td>
+                                                <td class="p-3 text-slate-600 text-xs">Validation de la connectivité et de l'isolation des réseaux sur site.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
                             <!-- Section 2 -->
                             <div>
                                 <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3">
@@ -747,7 +811,7 @@
                                     <h4 class="font-bold text-amber-800 mb-2 flex items-center gap-2"><i class="fa-solid fa-lightbulb"></i> Principale difficulté</h4>
                                     <p class="text-slate-700 text-sm leading-relaxed">Les baies de brassage étaient situées en hauteur et le câblage existant était dans un état déplorable : câbles non étiquetés, enchevêtrés, sans aucune logique apparente. Démêler, identifier et re-étiqueter chaque lien avant même de pouvoir brancher les nouveaux switches a demandé un travail minutieux, à l'échelle, dans des espaces peu accessibles.</p>
                                 </div>
-                                <p class="text-slate-700 leading-relaxed text-justify">Ce projet m'a permis de déployer une vraie infrastructure réseau sur site, dans des conditions réelles et avec des contraintes de temps. En 3 jours, on est partis d'un câblage chaotique pour arriver à un réseau propre, segmenté et supervisable à distance. Zéro incident après la mise en service, et le client pouvait tout voir depuis son téléphone.</p>
+                                <p class="text-slate-700 leading-relaxed text-justify">Ce projet m'a permis de déployer une vraie infrastructure réseau sur site, dans des conditions réelles. Entre la commande du matériel, la pré-configuration à l'atelier et l'intervention sur place, on a tenu le délai d'un mois fixé par le client. On est partis d'un câblage chaotique pour arriver à un réseau propre, segmenté et supervisable à distance. Zéro incident après la mise en service, et le client pouvait tout voir depuis son téléphone.</p>
                             </div>
                         </div>
                     </div>
@@ -913,7 +977,7 @@
                                         <div class="text-xs text-slate-500 mt-1">Alimentation & connectivité</div>
                                     </div>
                                 </div>
-                                <p class="text-slate-700 text-sm leading-relaxed">Les bornes FortiAP fonctionnent comme de simples relais WiFi : elles n'ont aucune configuration locale. Tout — les noms de réseaux WiFi, les règles de sécurité, les mises à jour de firmware — est envoyé et appliqué automatiquement depuis le FortiGate via un protocole dédié. Modifier une règle sur toutes les bornes = une seule action sur le FortiGate.</p>
+                                <p class="text-slate-700 text-sm leading-relaxed">Les bornes FortiAP fonctionnent comme de simples relais WiFi, sans aucune configuration locale. Tout est envoyé et appliqué automatiquement depuis le FortiGate via un protocole dédié : les noms de réseaux, les règles de sécurité, les mises à jour de firmware. Concrètement, modifier une règle sur toutes les bornes ne demande qu'une seule action sur le FortiGate.</p>
                             </div>
 
                             <!-- Section 4 -->
@@ -1418,6 +1482,198 @@
                                     <div class="bg-purple-50 border border-purple-200 rounded-xl p-4 text-center"><div class="text-2xl font-black text-purple-600">2</div><div class="text-sm font-bold text-slate-700">Sites interconnectés</div></div>
                                 </div>
                                 <p class="text-slate-700 leading-relaxed text-justify">Ce projet m'a permis d'appréhender la <strong>conception globale d'une infrastructure d'entreprise</strong> : du plan d'adressage IP à la supervision sécurisée, en passant par la virtualisation et le VPN inter-sites. Les technologies comme <code>Wazuh</code>, <code>Proxmox</code> et <code>pfSense</code> m'ont donné une vision concrète des architectures que je rencontre en entreprise chez Exantis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================ -->
+            <!-- [ORPHAN REMOVED] -->
+            <!-- ============================================================ -->
+            <div id="project-detail-3-removed" class="hidden">
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <!-- SIDEBAR -->
+                    <div class="lg:col-span-4 space-y-6">
+                        <div class="bg-gradient-to-br from-indigo-700 to-slate-900 rounded-2xl p-6 text-white shadow-lg">
+                            <div class="w-14 h-14 bg-white/15 rounded-xl flex items-center justify-center text-3xl mb-4">
+                                <i class="fa-solid fa-people-group"></i>
+                            </div>
+                            <h2 class="font-black text-xl leading-snug mb-2">Organisation de l'équipe & Mode Projet</h2>
+                            <p class="text-indigo-200 text-sm leading-relaxed">Coordination en binôme sur les deux projets E5 réalisés en entreprise.</p>
+                        </div>
+
+                        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                            <div class="bg-slate-800 text-white text-sm font-bold py-3 px-4 uppercase tracking-wider">Fiche</div>
+                            <div class="divide-y divide-slate-100 text-sm">
+                                <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Équipe</span><span class="text-slate-800 font-medium">Dario + Anton</span></div>
+                                <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Entreprise</span><span class="text-slate-800 font-medium">Exantis Informatique</span></div>
+                                <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Projets couverts</span><span class="text-slate-800 font-medium">Switches + TSE → M365</span></div>
+                                <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Méthode</span><span class="text-slate-800 font-medium">Projet structuré</span></div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                            <div class="bg-emerald-600 text-white text-sm font-bold py-3 px-4 uppercase tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-award"></i> Compétences BTS SIO Validées
+                            </div>
+                            <div class="p-4 space-y-3 text-xs font-medium text-slate-700 leading-tight">
+                                <div class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i> <strong>A1.1.1</strong> — Analyse et répartition des besoins</div>
+                                <div class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i> <strong>A1.2.2</strong> — Suivi de projet et communication d'équipe</div>
+                                <div class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i> <strong>A1.2.3</strong> — Participation à une démarche qualité</div>
+                                <div class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i> <strong>B1.1</strong> — Coordination lors des phases de bascule</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CONTENU PRINCIPAL -->
+                    <div class="lg:col-span-8 bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100">
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <div class="inline-block bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Épreuve E5</div>
+                        </div>
+                        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">Organisation de l'équipe & Mode Projet</h1>
+
+                        <p class="text-lg text-slate-700 mb-12 leading-relaxed border-l-4 border-indigo-500 pl-6 bg-slate-50 py-4 rounded-r-xl font-medium">
+                            Pour mener à bien les deux missions en entreprise, j'ai travaillé en binôme avec <strong>Anton</strong>, un autre technicien informatique d'Exantis. Nous avons adopté une méthodologie de projet structurée pour garantir la continuité de service.
+                        </p>
+
+                        <div class="space-y-12">
+
+                            <!-- Section I : Méthode de travail -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3">
+                                    <span class="bg-indigo-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">I</span> Méthode de Travail en Équipe
+                                </h2>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                                    <div class="bg-indigo-50 border border-indigo-200 rounded-xl p-4 text-center">
+                                        <i class="fa-solid fa-list-check text-2xl text-indigo-600 mb-2"></i>
+                                        <div class="font-bold text-slate-800 text-sm">Répartition des tâches</div>
+                                        <div class="text-xs text-slate-500 mt-1">Division selon nos spécialités pour gagner en efficacité</div>
+                                    </div>
+                                    <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 text-center">
+                                        <i class="fa-solid fa-comments text-2xl text-blue-600 mb-2"></i>
+                                        <div class="font-bold text-slate-800 text-sm">Communication</div>
+                                        <div class="text-xs text-slate-500 mt-1">Points quotidiens sur l'avancement et partage des procédures techniques</div>
+                                    </div>
+                                    <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 text-center">
+                                        <i class="fa-solid fa-arrows-rotate text-2xl text-emerald-600 mb-2"></i>
+                                        <div class="font-bold text-slate-800 text-sm">Coordination</div>
+                                        <div class="text-xs text-slate-500 mt-1">Synchronisation lors des phases critiques de bascule</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section II : Projet 1 Switches -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3">
+                                    <span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">II</span> Projet 1 : Segmentation du réseau local (HPE Instant On)
+                                </h2>
+                                <p class="text-slate-700 leading-relaxed text-justify mb-5">L'objectif était de rendre le réseau administrable en remplaçant les anciens switches non manageables de l'école Saint-André.</p>
+
+                                <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm mb-4">
+                                    <table class="w-full text-sm border-collapse">
+                                        <thead>
+                                            <tr class="bg-blue-700 text-white">
+                                                <th class="text-left p-3 font-bold">Étape du projet</th>
+                                                <th class="text-center p-3 font-bold w-32">Responsable</th>
+                                                <th class="text-left p-3 font-bold">Action principale</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-slate-100">
+                                            <tr class="bg-slate-50 hover:bg-blue-50 transition-colors">
+                                                <td class="p-3 font-bold text-slate-700">Audit & Repérage</td>
+                                                <td class="p-3 text-center"><span class="bg-slate-200 text-slate-700 text-xs font-bold px-2 py-1 rounded-full">Anton</span></td>
+                                                <td class="p-3 text-slate-600 text-sm">Inventaire des prises murales et identification des équipements existants.</td>
+                                            </tr>
+                                            <tr class="bg-white hover:bg-blue-50 transition-colors">
+                                                <td class="p-3 font-bold text-slate-700">Préparation Logique</td>
+                                                <td class="p-3 text-center"><span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-1 rounded-full">Moi</span></td>
+                                                <td class="p-3 text-slate-600 text-sm">Création et configuration des VLANs (Admin, Pédagogie, Management).</td>
+                                            </tr>
+                                            <tr class="bg-slate-50 hover:bg-blue-50 transition-colors">
+                                                <td class="p-3 font-bold text-slate-700">Installation Physique</td>
+                                                <td class="p-3 text-center"><span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-1 rounded-full">Moi</span></td>
+                                                <td class="p-3 text-slate-600 text-sm">Mise en rack et raccordement électrique des 6 switches.</td>
+                                            </tr>
+                                            <tr class="bg-white hover:bg-blue-50 transition-colors">
+                                                <td class="p-3 font-bold text-slate-700">Configuration Sécurité</td>
+                                                <td class="p-3 text-center"><span class="bg-slate-200 text-slate-700 text-xs font-bold px-2 py-1 rounded-full">Anton</span></td>
+                                                <td class="p-3 text-slate-600 text-sm">Mise en place des règles de filtrage entre les VLANs.</td>
+                                            </tr>
+                                            <tr class="bg-slate-50 hover:bg-blue-50 transition-colors">
+                                                <td class="p-3 font-bold text-slate-700">Tests</td>
+                                                <td class="p-3 text-center"><span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-2 py-1 rounded-full">Moi & Anton</span></td>
+                                                <td class="p-3 text-slate-600 text-sm">Validation de la connectivité et de l'isolation des réseaux.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Section III : Projet 2 TSE -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3">
+                                    <span class="bg-purple-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">III</span> Projet 2 : Migration TSE vers Microsoft 365
+                                </h2>
+                                <p class="text-slate-700 leading-relaxed text-justify mb-5">Migration des services vers le cloud pour offrir plus de flexibilité aux 14 collaborateurs d'Exantis Informatique.</p>
+
+                                <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm mb-4">
+                                    <table class="w-full text-sm border-collapse">
+                                        <thead>
+                                            <tr class="bg-purple-700 text-white">
+                                                <th class="text-left p-3 font-bold">Étape du projet</th>
+                                                <th class="text-center p-3 font-bold w-32">Responsable</th>
+                                                <th class="text-left p-3 font-bold">Action principale</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-slate-100">
+                                            <tr class="bg-slate-50 hover:bg-purple-50 transition-colors">
+                                                <td class="p-3 font-bold text-slate-700">Configuration Tenant</td>
+                                                <td class="p-3 text-center"><span class="bg-slate-200 text-slate-700 text-xs font-bold px-2 py-1 rounded-full">Anton</span></td>
+                                                <td class="p-3 text-slate-600 text-sm">Paramétrage de la console Microsoft 365 et des licences utilisateurs.</td>
+                                            </tr>
+                                            <tr class="bg-white hover:bg-purple-50 transition-colors">
+                                                <td class="p-3 font-bold text-slate-700">Préparation des Postes</td>
+                                                <td class="p-3 text-center"><span class="bg-purple-100 text-purple-700 text-xs font-bold px-2 py-1 rounded-full">Moi</span></td>
+                                                <td class="p-3 text-slate-600 text-sm">Nettoyage des anciennes sessions TSE et préparation des profils locaux.</td>
+                                            </tr>
+                                            <tr class="bg-slate-50 hover:bg-purple-50 transition-colors">
+                                                <td class="p-3 font-bold text-slate-700">Installation Software</td>
+                                                <td class="p-3 text-center"><span class="bg-purple-100 text-purple-700 text-xs font-bold px-2 py-1 rounded-full">Moi</span></td>
+                                                <td class="p-3 text-slate-600 text-sm">Déploiement de la suite Office (Outlook, Teams, OneDrive) sur les postes.</td>
+                                            </tr>
+                                            <tr class="bg-white hover:bg-purple-50 transition-colors">
+                                                <td class="p-3 font-bold text-slate-700">Migration Données</td>
+                                                <td class="p-3 text-center"><span class="bg-slate-200 text-slate-700 text-xs font-bold px-2 py-1 rounded-full">Anton</span></td>
+                                                <td class="p-3 text-slate-600 text-sm">Transfert des fichiers du serveur local vers SharePoint et OneDrive.</td>
+                                            </tr>
+                                            <tr class="bg-slate-50 hover:bg-purple-50 transition-colors">
+                                                <td class="p-3 font-bold text-slate-700">Accompagnement</td>
+                                                <td class="p-3 text-center"><span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-2 py-1 rounded-full">Moi & Anton</span></td>
+                                                <td class="p-3 text-slate-600 text-sm">Support technique auprès des utilisateurs lors de la prise en main des nouveaux outils.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Section IV : Bilan -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3">
+                                    <span class="bg-emerald-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">IV</span> Bilan de la Collaboration
+                                </h2>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                                    <div class="bg-blue-50 border border-blue-200 rounded-xl p-5">
+                                        <h4 class="font-bold text-blue-800 text-sm mb-3 flex items-center gap-2"><i class="fa-solid fa-network-wired"></i> Projet Switches</h4>
+                                        <p class="text-slate-700 text-sm leading-relaxed">Ma prise en charge de la partie matérielle et de la création des VLANs a permis à Anton de se concentrer sur la sécurité. Résultat : zéro interruption de service lors du déploiement.</p>
+                                    </div>
+                                    <div class="bg-purple-50 border border-purple-200 rounded-xl p-5">
+                                        <h4 class="font-bold text-purple-800 text-sm mb-3 flex items-center gap-2"><i class="fa-solid fa-cloud"></i> Projet TSE → M365</h4>
+                                        <p class="text-slate-700 text-sm leading-relaxed">Mon focus sur le déploiement client a assuré une transition fluide pour les utilisateurs pendant que les données étaient migrées en arrière-plan par Anton.</p>
+                                    </div>
+                                </div>
+                                <p class="text-slate-700 leading-relaxed text-justify">Cette organisation nous a permis de respecter les délais sur les deux projets tout en maintenant une haute disponibilité des services. Travailler en binôme a été un facteur clé de succès : chacun avançait sur son périmètre en toute autonomie, tout en restant synchronisé sur les phases qui nécessitaient une coordination directe.</p>
                             </div>
                         </div>
                     </div>
@@ -2355,6 +2611,24 @@ Write-Host "RAM libre : $ramFree Go"`,
                             { code: "B3.3", label: "Formation utilisateurs finaux aux nouveaux outils" }
                         ],
                         sections: [
+                            {
+                                title: "Organisation de l'équipe & Mode Projet",
+                                html: `<div class="bg-indigo-50 border border-indigo-200 rounded-xl p-4 mb-2">
+                                    <p class="text-sm text-indigo-700 mb-4">Mission réalisée en binôme avec <strong>Anton</strong> (technicien Exantis). Répartition des tâches selon les spécialités, points quotidiens sur l'avancement, synchronisation lors des phases de bascule.</p>
+                                    <div class="overflow-x-auto rounded-lg border border-indigo-200">
+                                        <table class="w-full text-xs border-collapse">
+                                            <thead><tr class="bg-indigo-700 text-white"><th class="text-left p-2 font-bold">Étape</th><th class="text-left p-2 font-bold">Date</th><th class="text-center p-2 font-bold">Responsable</th><th class="text-left p-2 font-bold">Action principale</th></tr></thead>
+                                            <tbody class="divide-y divide-indigo-100">
+                                                <tr class="bg-white"><td class="p-2 font-bold text-slate-700">Configuration Tenant</td><td class="p-2 text-slate-500">01 – 04/08/2025</td><td class="p-2 text-center"><span class="bg-slate-200 text-slate-700 font-bold px-2 py-0.5 rounded-full">Anton</span></td><td class="p-2 text-slate-600">Paramétrage de la console M365 et attribution des licences.</td></tr>
+                                                <tr class="bg-indigo-50"><td class="p-2 font-bold text-slate-700">Préparation des Postes</td><td class="p-2 text-slate-500">04 – 07/08/2025</td><td class="p-2 text-center"><span class="bg-indigo-100 text-indigo-700 font-bold px-2 py-0.5 rounded-full">Moi</span></td><td class="p-2 text-slate-600">Nettoyage des sessions TSE et préparation des profils locaux.</td></tr>
+                                                <tr class="bg-white"><td class="p-2 font-bold text-slate-700">Installation Software</td><td class="p-2 text-slate-500">07 – 12/08/2025</td><td class="p-2 text-center"><span class="bg-indigo-100 text-indigo-700 font-bold px-2 py-0.5 rounded-full">Moi</span></td><td class="p-2 text-slate-600">Déploiement d'Outlook, Teams et OneDrive sur les 14 postes.</td></tr>
+                                                <tr class="bg-indigo-50"><td class="p-2 font-bold text-slate-700">Migration Données</td><td class="p-2 text-slate-500">11 – 15/08/2025</td><td class="p-2 text-center"><span class="bg-slate-200 text-slate-700 font-bold px-2 py-0.5 rounded-full">Anton</span></td><td class="p-2 text-slate-600">Transfert des fichiers vers SharePoint et OneDrive.</td></tr>
+                                                <tr class="bg-white"><td class="p-2 font-bold text-slate-700">Accompagnement</td><td class="p-2 text-slate-500">15 – 20/08/2025</td><td class="p-2 text-center"><span class="bg-violet-100 text-violet-700 font-bold px-2 py-0.5 rounded-full">Moi & Anton</span></td><td class="p-2 text-slate-600">Support utilisateurs lors de la prise en main des nouveaux outils.</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>`
+                            },
                             {
                                 title: "Étape 1 — Audit du serveur RDS existant",
                                 text: "Avant de toucher quoi que ce soit : inventaire complet du serveur. Quelles <strong>applications métier</strong> sont installées ? Lesquelles ont un équivalent cloud ou peuvent tourner en local ? Cartographie des <strong>dossiers utilisateurs</strong> (<code>\\serveur\\Users\\</code>) : taille, structure, ancienneté des données. Identification des <strong>imprimantes réseau</strong> mappées et des lecteurs partagés. Le serveur hébergeait 12 sessions simultanées avec des profils itinérants — rien ne doit être perdu lors de la bascule."
